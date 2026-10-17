@@ -1,0 +1,52 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+htmlcov/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# Office temp
+~$*
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Scratch / generated intermediates
+编程/临时/
+tmp/
+_tmp*
+*.tmp
+*.npz
+*.npy
+*.bak
+*.swp
