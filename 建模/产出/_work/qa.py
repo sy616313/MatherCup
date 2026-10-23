@@ -41,7 +41,8 @@ print("匹配方式:", al["匹配方式"].value_counts().to_dict())
 
 print("\n== 验收 9：阈值表 + 缺口区 ==")
 th = pd.read_csv(OUT / "缺陷阈值表-M1.csv", encoding="utf-8")
-print("主表行数:", len(th), "(应为 7)；缺单位:", int(th["单位"].isna().sum()), "缺出处:", int(th["出处"].isna().sum()))
+print("主表行数:", len(th), "(应为 9 = 7 原生 + 2 外部)；缺单位:", int(th["单位"].isna().sum()), "缺出处:", int(th["出处"].isna().sum()),
+      "| 来源分级:", th["来源分级"].value_counts().to_dict())
 gap = (OUT / "缺陷阈值缺口-M1.md").read_text(encoding="utf-8")
 print("缺口区行数(G1-G3):", gap.count("| G"))
 

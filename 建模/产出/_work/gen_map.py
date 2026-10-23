@@ -71,7 +71,7 @@ lines.append("| 复现 | `_work/cmp_desktop.py`（语义比对）、`_work/diff5
 open("建模/产出/维度映射-M1.md", "w", encoding="utf-8", newline="\n").write("\n".join(lines) + "\n")
 print("维度映射-M1.md rows:", len(m))
 
-# ============ B. 缺陷阈值表（主表只放实测可用项 7 行） ============
+# ============ B. 缺陷阈值表（7 项数据集原生 + 2 项外部文献，方案甲） ============
 tr = []
 for _, r in thr.iterrows():
     tr.append({
@@ -81,9 +81,36 @@ for _, r in thr.iterrows():
         "统计量": "threshold_mean（均值）",
         "单位": r["单位"],
         "变换方式": "log10（1.csv 中为对数值）" if r["field_name_R"] in set(exact.field) else "原始量纲（1.csv 中未取对数）",
+        "来源分级": "数据集原生",
         "出处": r["出处"],
         "备注": f"中位数 {r['中位数']}（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定",
     })
+
+EXT = [
+    {
+        "化合物": "trans-2-nonenal",
+        "field_name_python": "X.E..2.nonenal",
+        "数值": 0.00011,
+        "统计量": "外部文献值（单点）",
+        "单位": "mg/L",
+        "变换方式": "原始量纲（1.csv 中未取对数）",
+        "来源分级": "外部文献（数据集无阈值）",
+        "出处": "Rychlik/Schieberle/Grosch 1998 阈值汇编（beer_orthonasal 0.110 ppb），经 CompKitchen 化合物页引用；检索记录见 建模/产出/阈值检索-M1.md §二",
+        "备注": "0.11 µg/L = 0.00011 mg/L；换算依据 1 µg/L = 0.001 mg/L；外部文献、非数据集原生，论文引用须标注来源",
+    },
+    {
+        "化合物": "Methanethiol (MeSH)",
+        "field_name_python": "MeSH",
+        "数值": 1.0,
+        "统计量": "外部文献值（单点）",
+        "单位": "ug/L",
+        "变换方式": "log10（1.csv 中为对数值）",
+        "来源分级": "外部文献（数据集无阈值）",
+        "出处": "Enartis《Sulfide Sensory Thresholds and Aroma Descriptions》(2019) 表头单位 ng/mL；检索记录见 建模/产出/阈值检索-M1.md §二",
+        "备注": "1 ng/mL = 1 µg/L；与数据集同表三个共同项（H2S/DES/DMS）同量级，见检索报告校准表",
+    },
+]
+tr.extend(EXT)
 usable = pd.DataFrame(tr)
 usable.to_csv("建模/产出/缺陷阈值表-M1.csv", index=False, encoding="utf-8", lineterminator="\n")
 print("缺陷阈值表 rows:", len(usable))
