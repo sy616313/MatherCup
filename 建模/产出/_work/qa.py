@@ -9,7 +9,7 @@ import pandas as pd
 
 OUT = pathlib.Path("建模/产出")
 files = ["口径规范-M1.md", "维度映射-M1.md", "Q1标定规则-M1.md", "缺陷阈值表-M1.csv",
-         "化合物名称对齐-M1.csv", "缺陷阈值缺口-M1.md"]
+         "化合物名称对齐-M1.csv", "缺陷阈值缺口-M1.md", "阈值检索-M1.md"]
 
 print("== 文件存在与编码 ==")
 for f in files:
