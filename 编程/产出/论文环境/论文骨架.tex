@@ -1,0 +1,110 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+% ===== 版式 =====
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.6cm,right=2.6cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,multirow,longtable,array}
+\usepackage{graphicx}
+\usepackage[labelsep=quad,font=small]{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+% 图路径：正式稿把图放 图集/Mx/，这里指向仓库内相对路径
+\graphicspath{{../../图集/}}
+
+\title{【题目名称】}
+\author{队伍编号：\underline{\hspace{3cm}}}
+\date{}
+
+\begin{document}
+
+% ===== 封面/标题 =====
+\maketitle
+
+% ===== 摘要（数字、专有名词、"针对问题一二三"加粗）=====
+\begin{abstract}
+\noindent 本文针对【问题背景一句话】，建立了【模型名称】。
+
+针对问题一，\textbf{【方法】}……，得到\textbf{【关键数字】}……
+
+针对问题二，\textbf{【方法】}……，得到\textbf{【关键数字】}……
+
+针对问题三，\textbf{【方法】}……，得到\textbf{【关键数字】}……
+
+本文模型经过误差分析、灵敏度检验与稳健性检验，结果【一句话结论】。
+
+\vspace{0.6em}
+\noindent\textbf{关键词：}关键词一；关键词二；关键词三；关键词四；关键词五；关键词六
+\end{abstract}
+
+\newpage
+
+% ===== 正文：各问统一格式 问题描述 → 模型建立 → 算法求解 → 求解结果 =====
+\section{问题重述}
+\subsection{问题背景}
+\subsection{问题提出}
+
+\section{问题分析}
+\subsection{问题一的分析}
+\subsection{问题二的分析}
+
+\section{模型假设}
+\begin{enumerate}[label=(\arabic*)]
+    \item 假设一：……
+    \item 假设二：……
+\end{enumerate}
+
+\section{符号说明}
+\begin{table}[htbp]
+    \centering
+    \caption{符号说明}
+    \begin{tabular}{lll}
+        \toprule
+        符号 & 含义 & 单位 \\
+        \midrule
+        $x_{i}$ & 决策变量 & 个 \\
+        $\beta$ & 回归系数 & -- \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{问题一模型的建立与求解}
+\subsection{问题描述}
+\subsection{模型建立}
+\begin{equation}
+    \min_{x} \; f(x) = \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2
+    \quad \text{s.t.} \quad
+    \begin{cases}
+        A x \le b, \\
+        x \ge 0 .
+    \end{cases}
+\end{equation}
+
+\subsection{算法求解}
+\subsection{求解结果}
+% 插图：只插 图集/Mx/ 里的图，不重画
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.75\linewidth]{M1/图M1-01-示例.png}
+    \fbox{\parbox[c][4cm][c]{0.6\linewidth}{\centering 图片占位：引用 图集/Mx/图Mx-NN-短名.png}}
+    \caption{【图题】}
+\end{figure}
+
+\section{模型检验}
+\subsection{误差分析}
+\subsection{灵敏度分析}
+\subsection{稳健性分析}
+
+\section{模型评价与推广}
+\subsection{模型优点}
+\subsection{模型缺点}
+\subsection{模型推广}
+
+% ===== 参考文献：6–7 篇，英文 ≤2 篇（专家十条第 1 条）=====
+\begin{thebibliography}{9}
+\bibitem{ref1} 姜启源, 谢金星, 叶俊. 数学模型（第五版）. 北京: 高等教育出版社, 2018.
+\bibitem{ref2} 司守奎, 孙玺菁. 数学建模算法与应用（第三版）. 北京: 国防工业出版社, 2021.
+\end{thebibliography}
+
+\end{document}

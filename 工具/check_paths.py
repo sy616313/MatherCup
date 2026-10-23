@@ -29,7 +29,8 @@ ABSOLUTE_PATTERNS = (
     re.compile(r"[A-Za-z]:[\\/]"),
     re.compile(r"/(?:Users|home)/"),
     re.compile(r"file://"),
-    re.compile(r"\\\\[^\\]+\\"),
+    # UNC 形如 \\server\share：要求反斜杠后紧跟主机名，避免把 LaTeX 换行符 \\ 误判
+    re.compile(r"\\\\[A-Za-z0-9_.$-]+\\"),
 )
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 CODE_RE = re.compile(r"`([^`\n]+)`")
