@@ -3,13 +3,18 @@
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SELF = Path(__file__).resolve()
-SKIP_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", ".idea", ".vscode"}
+SKIP_DIRS = {
+    ".git", ".venv", "venv", "__pycache__", "node_modules", ".idea", ".vscode",
+    # 本机目录联结的外部资料库：几 GB、非仓库内容，整棵剪掉
+    "外部资料",
+}
 TEXT_SUFFIXES = {".md", ".py", ".txt", ".yml", ".yaml", ".json", ".tex", ".csv", ".tsv"}
 PATH_PREFIXES = (
     "资料/", "建模/", "编程/", "论文/", "审阅/", "模板/",
@@ -31,14 +36,14 @@ CODE_RE = re.compile(r"`([^`\n]+)`")
 
 
 def iter_files():
-    for path in ROOT.rglob("*"):
-        if not path.is_file():
-            continue
-        if path.resolve() == SELF:
-            continue
-        if any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts):
-            continue
-        yield path
+    """按目录剪枝遍历；SKIP_DIRS 内的目录整棵不进入。"""
+    for current, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        for name in filenames:
+            path = Path(current) / name
+            if path.resolve() == SELF:
+                continue
+            yield path
 
 
 def line_of(text: str, index: int) -> int:
