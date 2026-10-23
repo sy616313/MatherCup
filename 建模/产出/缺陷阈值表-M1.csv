@@ -1,0 +1,8 @@
+化合物,field_name_python,数值,统计量,单位,变换方式,出处,备注
+Acetaldehyde,acetaldehyde,50.0,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 50 行,中位数 50.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Diacetyl,"2,3-butanedione",0.29925,threshold_mean（均值）,mg/L,原始量纲（1.csv 中未取对数）,8.xlsx/Sensory thresholds 第 127 行,中位数 0.09（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+4-vinylguaiacol,X4VG,0.206333,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 146 行,中位数 0.2（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Diethyl sulfide,DES,1.2,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 154 行,中位数 1.2（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Dimethyl sulfide,DMS,17.25,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 155 行,中位数 19.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Hydrogen sulfide,H2S,3.5,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 156 行,中位数 3.5（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Sulfur dioxide,SO2-mg.L.,15.333333,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,8.xlsx/Sensory thresholds 第 159 行,中位数 11.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定

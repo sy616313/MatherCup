@@ -1,0 +1,8 @@
+化合物,field_name_python,field_name_R,数值,中位数,单位,出处
+Acetaldehyde,acetaldehyde,acetaldehyde,50.0,50.0,mg/L,8.xlsx/Sensory thresholds 第 50 行
+Diacetyl,"2,3-butanedione",X2.3.butanedione,0.29925,0.09,mg/L,8.xlsx/Sensory thresholds 第 127 行
+4-vinylguaiacol,X4VG,X4VG,0.206333333,0.2,mg/L,8.xlsx/Sensory thresholds 第 146 行
+Diethyl sulfide,DES,DES,1.2,1.2,ug/L,8.xlsx/Sensory thresholds 第 154 行
+Dimethyl sulfide,DMS,DMS,17.25,19.0,ug/L,8.xlsx/Sensory thresholds 第 155 行
+Hydrogen sulfide,H2S,H2S,3.5,3.5,ug/L,8.xlsx/Sensory thresholds 第 156 行
+Sulfur dioxide,SO2-mg.L.,SO2.mg.L.,15.33333333,11.0,mg/L,8.xlsx/Sensory thresholds 第 159 行

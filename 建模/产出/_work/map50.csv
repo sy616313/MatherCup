@@ -1,0 +1,51 @@
+序号,c4,summary,letter,cell,readable,note
+1,A_malt_all,A_malt_all,B,Q7,Malt - overall,
+2,A_malt_grain,A_malt_grain,C,Q10,Malt - grain,
+3,A_malt_bread,A_malt_bread,D,Q12,Malt - bread,
+4,A_malt_cara,A_malt_cara,E,Q14,Malt - caramel,
+5,A_malt_burn,A_malt_burn,F,Q16,Malt - smoked,
+6,A_hops_all,A_hops_all,G,Q20,Hops - overall,
+7,A_hops_citrus,A_hops_citrus,H,Q23,Hops - citrus,
+8,A_hops_tropical,A_hops_tropical,I,Q25,Hops - tropical fruit,
+9,A_hops_noble,A_hops_noble,J,Q27,Hops - grassy,
+10,A_hops_woody,A_hops_woody,K,Q29,Hops - woody,
+11,A_esters_all,A_esters_all,L,Q33,Esters - overall,
+12,A_esters_ethac,A_esters_ethac,M,Q36,Esters - nail polish,
+13,A_esters_isoaa,A_esters_isoaa,N,Q38,Esters - banana,
+14,A_esters_flower,A_esters_flower,O,Q40,Esters - floral,
+15,A_esters_fruity,A_ester_fruity,P,Q42,Esters - fruity,拼写差异：summary 写作 `A_ester_fruity`
+16,F_malt_all,F_malt_all,Q,AG7,Malt - overall,
+17,F_malt_grain,F_malt_grain,R,AG10,Malt - grain,
+18,F_malt_bread,F_malt_bread,S,AG12,Malt - bread,
+19,F_malt_cara,F_malt_cara,T,AG14,Malt - caramel,
+20,F_malt_burn,F_malt_burn,U,AG16,Malt - smoked,
+21,F_hops_all,F_hops_all,V,AG20,Hops - overall,
+22,F_hops_citrus,F_hops_citrus,W,AG23,Hops - citrus,
+23,F_hops_tropical,F_hops_tropical,X,AG25,Hops - tropical fruit,
+24,F_hops_noble,F_hops_noble,Y,AG27,Hops - grassy,
+25,F_hops_woody,F_hops_woody,Z,AG29,Hops - woody,
+26,F_esters_all,F_esters_all,AA,AG33,Esters - overall,
+27,F_esters_ethac,F_esters_ethac,AB,AG36,Esters - nail polish,
+28,F_esters_isoaa,F_esters_isoaa,AC,AG38,Esters - banana,
+29,F_esters_flower,F_esters_flower,AD,AG40,Esters - floral,
+30,F_esters_fruity,F_ester_fruity,AE,AG42,Esters - fruity,拼写差异：summary 写作 `F_ester_fruity`
+31,acidity,acidity,AL,AG58,Acidity,C 组：summary 列序与 4.csv 不同，禁止按位置取
+32,bitternes,bitternes,AG,Q54,Bitterness,C 组：summary 列序与 4.csv 不同，禁止按位置取
+33,sweetness,sweetness,AK,AG54,Sweetness,C 组：summary 列序与 4.csv 不同，禁止按位置取
+34,X4vg,4vg,AO,Q76,4-vinyl guaiacol,拼写差异：summary 写作 `4vg`；C 组：summary 列序与 4.csv 不同，禁止按位置取
+35,diacetyl,diacetyl,AQ,AG72,Diacetyl,C 组：summary 列序与 4.csv 不同，禁止按位置取
+36,dms,dms,AM,Q68,Dimethyl sulfide,C 组：summary 列序与 4.csv 不同，禁止按位置取
+37,metallic,metallic,AN,Q72,Metallic,C 组：summary 列序与 4.csv 不同，禁止按位置取
+38,stale_hops,stale_hops,AR,AG76,Stale hops,C 组：summary 列序与 4.csv 不同，禁止按位置取
+39,t2n,t2n,AP,AG68,Trans-2-nonenal,C 组：summary 列序与 4.csv 不同，禁止按位置取
+40,orange,orange,AS,Q82,Orange,C 组：summary 列序与 4.csv 不同，禁止按位置取
+41,coriander,coriander,AT,Q86,Coriander,C 组：summary 列序与 4.csv 不同，禁止按位置取
+42,clove,clove,AU,Q90,Clove,C 组：summary 列序与 4.csv 不同，禁止按位置取
+43,lactic,lactic,AV,AG82,Lactic acid,C 组：summary 列序与 4.csv 不同，禁止按位置取
+44,acetic,acetic,AW,AG86,Acetic acid,C 组：summary 列序与 4.csv 不同，禁止按位置取
+45,barnyard,barnyard,AX,AG90,Barnyard,C 组：summary 列序与 4.csv 不同，禁止按位置取；⚠ summary 实际错引 `AG76`（与 stale_hops 同格），**应为 `AG90`**，见 §三
+46,alcohol,alcohol,AJ,AG50,Alcohol,C 组：summary 列序与 4.csv 不同，禁止按位置取
+47,aftertaste,aftertaste,AI,Q62,Aftertaste,C 组：summary 列序与 4.csv 不同，禁止按位置取
+48,body,body,AF,Q50,Body,C 组：summary 列序与 4.csv 不同，禁止按位置取
+49,co2,co2,AH,Q58,Carbonation,C 组：summary 列序与 4.csv 不同，禁止按位置取
+50,overall,overall,AY,Q94,Overall appreciation,C 组：summary 列序与 4.csv 不同，禁止按位置取

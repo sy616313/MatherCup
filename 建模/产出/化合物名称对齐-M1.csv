@@ -1,0 +1,232 @@
+1csv字段,2csv节点名,匹配方式,备注
+acetaldehyde,Acetaldehyde,自动,归一化后与 2.csv 节点名完全相同
+CS2,Carbon disulfide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+DES,Diethyl sulfide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+DMS,Dimethyl sulfide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl_2.methyl_butyrate,Ethyl 2-methylbutyrate,自动,归一化后与 2.csv 节点名完全相同
+ethyl_acetate,Ethyl acetate,自动,归一化后与 2.csv 节点名完全相同
+ethyl_decanoate,Ethyl decanoate,自动,归一化后与 2.csv 节点名完全相同
+ethyl_hexanoate,Ethyl hexanoate,自动,归一化后与 2.csv 节点名完全相同
+ethyl_isovalerate,Ethyl 3-methylbutyrate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl_octanoate,Ethyl octanoate,自动,归一化后与 2.csv 节点名完全相同
+ethyl_propionate,Ethyl propionate,自动,归一化后与 2.csv 节点名完全相同
+H2S,Hydrogen sulfide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isoamyl_alcohol,Isoamyl alcohol,自动,归一化后与 2.csv 节点名完全相同
+isobutanol,Isobutanol,自动,归一化后与 2.csv 节点名完全相同
+isobutyl_acetate,Isobutyl acetate,自动,归一化后与 2.csv 节点名完全相同
+isopentyl_acetate,Isoamyl acetate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+MeSH,Methanethiol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+octyl_acetate,Octyl acetate,自动,归一化后与 2.csv 节点名完全相同
+phenethyl_acetate,Phenethyl acetate,自动,归一化后与 2.csv 节点名完全相同
+phenethyl_alcohol,Phenethyl alcohol,自动,归一化后与 2.csv 节点名完全相同
+X4VG,4-vinylguaiacol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+SO2.mg.L.,Sulfur dioxide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+acetic_acid.g.L.,Acetic acid,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ammonia.mg.L.,Ammonia,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+color.EBC.,Color,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+betaglucan.mg.L.,Betaglucan,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+lactic_acid.mg.L.,Lactic acid,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+glycerol,Glycerol,自动,归一化后与 2.csv 节点名完全相同
+iron,Iron,自动,归一化后与 2.csv 节点名完全相同
+pH,pH,自动,归一化后与 2.csv 节点名完全相同
+protein.g.L.,Protein,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+bitterness,Iso-alpha acids,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+GFS,Sugars,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethanol..v.v.,Ethanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+CO2.PSI.,Carbon dioxide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+unfermentables,Unfermentables,自动,归一化后与 2.csv 节点名完全相同
+kcalperc,Caloric value,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X1.propanol,1-propanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.3.butanedione,Diacetyl,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X3.methylbutanal,3-methylbutanal,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+propylene.glycol,Propylene glycol,自动,归一化后与 2.csv 节点名完全相同
+propyl.acetate,N-propyl acetate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+n.pentanol,N-pentanol,自动,归一化后与 2.csv 节点名完全相同
+X2.methyl.1.butanol,2-methyl-1-butanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isopentyl.formate,Isopentyl formate,自动,归一化后与 2.csv 节点名完全相同
+ethyl.isobutyrate,Ethyl isobutyrate,自动,归一化后与 2.csv 节点名完全相同
+X3.methyl.2.butenal,3-methyl-2-butenal,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.methyltetrahydrofuran.3.one,2-methyltetrahydrofuran-3-one,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.butyrate,Ethyl butyrate,自动,归一化后与 2.csv 节点名完全相同
+butyl.acetate,Butyl acetate,自动,归一化后与 2.csv 节点名完全相同
+methylpyrazine,Methylpyrazine,自动,归一化后与 2.csv 节点名完全相同
+furfural,Furfural,自动,归一化后与 2.csv 节点名完全相同
+ethyl.lactate,Ethyl lactate,自动,归一化后与 2.csv 节点名完全相同
+X3Z.hexenol,Cis-3-hexenol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+n.hexanol,N-hexanol,自动,归一化后与 2.csv 节点名完全相同
+styrene,Styrene,自动,归一化后与 2.csv 节点名完全相同
+X2.furanmethanol,Furfuryl alcohol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X3.methyl.2.hexanol,3-methyl-2-hexanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X3.furanmethanol,3-furanmethanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.acetylfuran,2-acetylfuran,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.6.dimethyl.pyrazine,"2,6-dimethylpyrazine",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+amyl.acetate,Amyl acetate,自动,归一化后与 2.csv 节点名完全相同
+ethyl.tiglate,Ethyl tiglate,自动,归一化后与 2.csv 节点名完全相同
+benzaldehyde,Benzaldehyde,自动,归一化后与 2.csv 节点名完全相同
+X5.methylfurfural,5-methylfurfural,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+n.heptanol,N-heptanol,自动,归一化后与 2.csv 节点名完全相同
+X1.octen.3.ol,1-octen-3-ol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X3.methylthio.propanol,Methionol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isomaltol,Isomaltol,自动,归一化后与 2.csv 节点名完全相同
+X6.methyl.5.hepten.2.one,Methyl heptenone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.pentyl.furan,2-pentyl furan,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.hex..3E..enoate,Ethyl 3-hexanoate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+alpha.phellandrene,α-phellandrene,自动,归一化后与 2.csv 节点名完全相同
+dehydroxy.cis.linalool.oxide,Dehydroxy-cis-linalool oxide,自动,归一化后与 2.csv 节点名完全相同
+hexyl.acetate,Hexyl acetate,自动,归一化后与 2.csv 节点名完全相同
+isopentyl.butanoate,Isopentyl butanoate,自动,归一化后与 2.csv 节点名完全相同
+X2.ethyl.1.hexanol,2-ethyl-1-hexanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+beta.phellandrene,Beta-phellandrene,自动,归一化后与 2.csv 节点名完全相同
+limonene,Limonene,自动,归一化后与 2.csv 节点名完全相同
+eucalyptol,Eucalyptol,自动,归一化后与 2.csv 节点名完全相同
+benzyl.alcohol,Benzyl alcohol,自动,归一化后与 2.csv 节点名完全相同
+ethyl.hex..2E..enoate,Ethyl 2-hexenoate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+phenylacetaldehyde,Phenylacetaldehyde,自动,归一化后与 2.csv 节点名完全相同
+X.E..beta.ocimene,E-β-ocimene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+prenyl.isobutyrate,Prenyl isobutyrate,自动,归一化后与 2.csv 节点名完全相同
+ethyl.furoate,Ethyl furoate,自动,归一化后与 2.csv 节点名完全相同
+ortho.cresol,O-cresol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.5.methylhexanoate,Ethyl 5-methylhexanoate,自动,归一化后与 2.csv 节点名完全相同
+X2.acetylpyrrole,2-acetylpyrrole,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isoamyl.lactate,Isoamyl lactate,自动,归一化后与 2.csv 节点名完全相同
+n.octanol,N-octanol,自动,归一化后与 2.csv 节点名完全相同
+cis.linalool.oxide,Cis-linalool oxide,自动,归一化后与 2.csv 节点名完全相同
+meta.cymenene,Meta-cymenene,自动,归一化后与 2.csv 节点名完全相同
+terpinolene,Terpinolene,自动,归一化后与 2.csv 节点名完全相同
+linalool,Linalool,自动,归一化后与 2.csv 节点名完全相同
+nonan.2.ol,2-nonanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+n.nonanal,N-nonanal,自动,归一化后与 2.csv 节点名完全相同
+X2.methyl.benzofuran,2-methyl-benzofuran,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+heptyl.acetate,Heptyl acetate,自动,归一化后与 2.csv 节点名完全相同
+X4.methyl.1.pentanol,4-methyl-1-pentanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+neo.allo.ocimene,Neo-allo-ocimene,自动,归一化后与 2.csv 节点名完全相同
+x.methyl.1.octanol,X-methyl-1-octanol,自动,归一化后与 2.csv 节点名完全相同
+trans.dihydro.beta.terpineol,Trans-dihydro-β-terpineol,自动,归一化后与 2.csv 节点名完全相同
+cis.beta.terpineol,Cis-β-terpineol,自动,归一化后与 2.csv 节点名完全相同
+y.methyl.1.octanol,Y-methyl-1-octanol,自动,归一化后与 2.csv 节点名完全相同
+camphor,Camphor,自动,归一化后与 2.csv 节点名完全相同
+isobutyl.hexanoate,Isobutyl hexanoate,自动,归一化后与 2.csv 节点名完全相同
+nerol.oxide,Nerol oxide,自动,归一化后与 2.csv 节点名完全相同
+X.E..2.nonenal,E-2-nonenal,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+cis.dihydro.beta.terpineol,Cis-dihydro-β-terpineol,自动,归一化后与 2.csv 节点名完全相同
+X4.ethyl.phenol,4-ethyl-phenol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isoborneol,Isoborneol,自动,归一化后与 2.csv 节点名完全相同
+ethyl.benzoate,Ethyl benzoate,自动,归一化后与 2.csv 节点名完全相同
+n.nonanol,N-nonanol,自动,归一化后与 2.csv 节点名完全相同
+terpinen.4.ol,Terpinen-4-ol,自动,归一化后与 2.csv 节点名完全相同
+diethyl.succinate,Diethyl succinate,自动,归一化后与 2.csv 节点名完全相同
+vinyl.caprylate,Vinyl caprylate,自动,归一化后与 2.csv 节点名完全相同
+X1.alpha.terpineol,Alpha-terpineol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl..E..linalool,Ethyl linalool,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.nicotinate,Ethyl nicotinate,自动,归一化后与 2.csv 节点名完全相同
+citronellol,Citronellol,自动,归一化后与 2.csv 节点名完全相同
+nerol,Nerol,自动,归一化后与 2.csv 节点名完全相同
+hydroxy.methyl.furfural,5-hydroxymethylfurfural,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+E.ocimenone,Ocimenone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+cumin.aldehyde,Cumin aldehyde,自动,归一化后与 2.csv 节点名完全相同
+ethyl.phenylacetate,Ethyl phenylacetate,自动,归一化后与 2.csv 节点名完全相同
+isopentyl.hexanoate,Isopentyl hexanoate,自动,归一化后与 2.csv 节点名完全相同
+geraniol,Geraniol,自动,归一化后与 2.csv 节点名完全相同
+beta.cyclohomocitral,β-cyclohomocitral,自动,归一化后与 2.csv 节点名完全相同
+E.cinnamaldehyde,Cinnamaldehyde,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+n.decanol,N-decanol,自动,归一化后与 2.csv 节点名完全相同
+neryl.formate,Neryl formate,自动,归一化后与 2.csv 节点名完全相同
+X4.ethyl.guaiacol,4-ethyl-guaiacol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.undecanone,2-undecanone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+trans.dihydro.alpha.terpinyl.acetate,Trans-dihydro-α-terpinyl acetate,自动,归一化后与 2.csv 节点名完全相同
+terpinen.4.ol.acetate,Terpinen-4-ol acetate,自动,归一化后与 2.csv 节点名完全相同
+X2.undecanol,2-undecanol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+delta.terpinyl.acetate,Terpiryl acetate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X.E.E..2.4.decadienal,"E,E-2,4-decadienal",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+methyl.geranate,Methyl geranate,自动,归一化后与 2.csv 节点名完全相同
+car.3.en.2.one,Car-3-en-2-one,自动,归一化后与 2.csv 节点名完全相同
+dimethoxy..E..citral,Dimethoxy-E-citral,自动,归一化后与 2.csv 节点名完全相同
+X2.butyloctanoate,2-butyl octanoate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X4.methoxysalicylaldehyde,4-methoxysalicylaldehyde,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.hydrocinnamate,Ethyl hydrocinnamate,自动,归一化后与 2.csv 节点名完全相同
+eugenol,Eugenol,自动,归一化后与 2.csv 节点名完全相同
+gamma.nonalactone,Gamma-nonalactone,自动,归一化后与 2.csv 节点名完全相同
+methyl.para.anisate,Methyl para-anisate,自动,归一化后与 2.csv 节点名完全相同
+X.E..beta.damascenone,E-β-damascenone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl..9..decenoate,Ethyl 9-decenoate,自动,归一化后与 2.csv 节点名完全相同
+vanillin,Vanillin,自动,归一化后与 2.csv 节点名完全相同
+geosmin,Geosmin,自动,归一化后与 2.csv 节点名完全相同
+dodecanal,Dodecanal,自动,归一化后与 2.csv 节点名完全相同
+X4.8.alpha.epoxy.caryophyllane,"4,8-α-epoxy-caryophyllane",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+E.caryophyllene,Caryophyllene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X.E..alpha.ionone,E-α-ionone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+perillyl.acetate,Perillyl acetate,自动,归一化后与 2.csv 节点名完全相同
+beta.humulene,β-humulene,自动,归一化后与 2.csv 节点名完全相同
+X2.phenyl.ethyl.butyrate,2-phenyl ethyl butyrate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X.Z..beta.farnesene,Z-β-farnesene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+pentyl.octanoate,Pentyl octanoate,自动,归一化后与 2.csv 节点名完全相同
+X.E..beta.farnesene,E-β-farnesene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2.methylbutyl.octanoate,2-methylbutyl octanoate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+alpha.humulene,Alpha-humulene,自动,归一化后与 2.csv 节点名完全相同
+neryl.propanoate,Neryl propanoate,自动,归一化后与 2.csv 节点名完全相同
+X9.epi..E..caryophyllene,9-epi-E-caryophyllene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl..E..cinnamate,Ethyl cinnamate,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+linalool.isovalerate,Linalool isovalerate,自动,归一化后与 2.csv 节点名完全相同
+alpha.terpinyl.isobutanoate,α-terpinyl isobutanoate,自动,归一化后与 2.csv 节点名完全相同
+n.dodecanol,N-dodecanol,自动,归一化后与 2.csv 节点名完全相同
+germacrene.D,Germacrene D,自动,归一化后与 2.csv 节点名完全相同
+X.E..beta.ionone,E-β-ionone,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+valencene,Valencene,自动,归一化后与 2.csv 节点名完全相同
+neryl.isobutanoate,Neryl isobutanoate,自动,归一化后与 2.csv 节点名完全相同
+E.methyl.isoeugenol,Methyl isoeugenol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X.Z..dihydro.apofarnesal,Z-dihydro-apofarnesal,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+butylated.hydroxytoluene,Butylated hydroxytoluene,自动,归一化后与 2.csv 节点名完全相同
+X.E..dihydro.apofarnesal,E-dihydro-apofarnesal,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+Z.nerolidol,Z-nerolidol,自动,归一化后与 2.csv 节点名完全相同
+X.E..ortho.methoxy.cinnamaldehyde,E-ortho-methoxy cinnamaldehyde,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+alpha.calacorene,α-calacorene,自动,归一化后与 2.csv 节点名完全相同
+E.nerolidol,E-nerolidol,自动,归一化后与 2.csv 节点名完全相同
+dihydroisocaryophyllene.epoxide,Tobacarol,人工,8.xlsx 该 R 名的 chemical_name 即 Tobacarol（源表命名不一致）
+caryophyllene.alcohol,Caryophyllene alcohol,自动,归一化后与 2.csv 节点名完全相同
+neryl.isovalerate,Neryl isovalerate,自动,归一化后与 2.csv 节点名完全相同
+spathulenol,Spathulenol,自动,归一化后与 2.csv 节点名完全相同
+caryophyllene.oxide,Caryophyllene oxide,自动,归一化后与 2.csv 节点名完全相同
+humulene.epoxide.II,Humulene epoxide II,自动,归一化后与 2.csv 节点名完全相同
+alloaromadendrene.epoxide,Allo-aromadendrene epoxide,自动,归一化后与 2.csv 节点名完全相同
+X1.10.di.epi.cubenol,Epicubenol,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isopropyl.laurate,Isopropyl laurate,自动,归一化后与 2.csv 节点名完全相同
+caryophylla.4.12..8.13..dien.5.alpha.ol,"Caryophylla-4,8-dien-5-ol",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+gamma.eudesmol,Gamma-eudesmol,自动,归一化后与 2.csv 节点名完全相同
+alpha.muurolol,α-muurolol,自动,归一化后与 2.csv 节点名完全相同
+X1.2.dihydro.8.hydroxy..2E..linalool,"1,2-dihydro-8-hydroxy-2E-linalool",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+tau.cadinol,Tau-cadinol,自动,归一化后与 2.csv 节点名完全相同
+selin.11.en.4.alpha.ol,Kongol,人工,8.xlsx 该 R 名的 chemical_name 即 Kongol（源表命名不一致）
+alpha.eudesmol,α-eudesmol,自动,归一化后与 2.csv 节点名完全相同
+X14.hydroxy.9.epi..E..caryophyllene,14-hydroxy-9-epi-(E)-caryophyllene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+tau.muurolol,Tau-muurolol,自动,归一化后与 2.csv 节点名完全相同
+n.tetradecanol,N-tetradecanol,自动,归一化后与 2.csv 节点名完全相同
+foeniculin,Eoeniculin,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+cadalene,Cadalene,自动,归一化后与 2.csv 节点名完全相同
+X2.3.dihydro.farnesol,"2,3-dihydro-farnesol",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2E.6Z.farnesal,"E,Z-farnesal",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+caryophyllene.acetate,Caryophyllene acetate,自动,归一化后与 2.csv 节点名完全相同
+X14.hydroxy.alpha.humulene,14-hydroxy-α-humulene,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2Z.6E.farnesal,"Z,E-farnesal",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2Z.6Z.farnesol,"Z,Z-farnesol",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+X2Z.6E.farnesol,"Z,E-farnesol",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ambroxide,Ambroxide,自动,归一化后与 2.csv 节点名完全相同
+benzyl.benzoate,Benzyl benzoate,自动,归一化后与 2.csv 节点名完全相同
+X2E.6E.methyl.farnesoate,"2E,6E-methyl farnesoate",人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+ethyl.tetradecanoate,Ethyl tetradecanoate,自动,归一化后与 2.csv 节点名完全相同
+X2.ethylhexylsalicylate,2-ethylhexyl acrylate,人工,8.xlsx 把 salicylate 写作 acrylate（源表命名不一致）
+isopropyl.tetradecanoate,Isopropyl tetradecanoate,自动,归一化后与 2.csv 节点名完全相同
+ethyl.pentadecanoate,Ethyl pentadecanoate,自动,归一化后与 2.csv 节点名完全相同
+methyl.hexadecanoate,Methyl hexadecanoate,自动,归一化后与 2.csv 节点名完全相同
+Z.Z.geranyl.linalool,"Z,Z-geranyl linalool",自动,归一化后与 2.csv 节点名完全相同
+ethyl.hexadecanoate,Ethyl hexadecanoate,自动,归一化后与 2.csv 节点名完全相同
+manool.oxide,Manool oxide,自动,归一化后与 2.csv 节点名完全相同
+X13.epi.manool.oxide,13-epi manool oxide,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+isopropyl.hexadecanoate,Isopropyl hexadecanoate,自动,归一化后与 2.csv 节点名完全相同
+manool,Manool,自动,归一化后与 2.csv 节点名完全相同
+ethyl.octadecanoate,Ethyl octadecanoate,自动,归一化后与 2.csv 节点名完全相同
+ethyl.pentanoate,Ethyl pentanoate,自动,归一化后与 2.csv 节点名完全相同
+X2.ethyl.3.methylpyrazine,2-ethyl-3-methylpyrazine,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+esters_sum,Total ester compounds,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+aroma_hops_sum,Total hop aroma compounds,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+acids_sum,Total acids,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
+sulfur_sum,Total sulfur compounds,人工,经 8.xlsx/Sensory thresholds 桥接（field_name_R→chemical_name）
