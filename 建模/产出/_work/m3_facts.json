@@ -1,0 +1,76 @@
+{
+  "shapes": {
+    "1.csv": [
+      250,
+      234
+    ],
+    "4.csv": [
+      250,
+      53
+    ],
+    "5.csv": [
+      50,
+      51
+    ],
+    "6.csv": [
+      44,
+      51
+    ],
+    "7.csv": [
+      250,
+      189
+    ]
+  },
+  "n_feats": 231,
+  "n_dims": 50,
+  "e1_mapped": 42,
+  "e1_unmapped": [
+    "Iso-alpha acids",
+    "Sugars"
+  ],
+  "e1_cols_fail": [],
+  "e3_attrs": 186,
+  "e3_bridge": 39,
+  "e3_conflict": [
+    "aroma_fruity",
+    "aroma_pear",
+    "taste_fruity",
+    "taste_pear"
+  ],
+  "e3_no_bridge": 142,
+  "e3_non_desc": [
+    "taste_apple"
+  ],
+  "e3_dims_covered": 39,
+  "e3_dims_uncovered": [
+    "A_esters_ethac",
+    "A_esters_fruity",
+    "F_esters_ethac",
+    "F_esters_fruity",
+    "stale_hops",
+    "orange",
+    "clove",
+    "lactic",
+    "acetic",
+    "body",
+    "overall"
+  ],
+  "miss_cells": 73,
+  "miss_cols": {
+    "X2.3.butanedione": 9,
+    "X3.methylbutanal": 7,
+    "ethyl.isobutyrate": 1,
+    "methylpyrazine": 12,
+    "furfural": 1,
+    "amyl.acetate": 27,
+    "phenylacetaldehyde": 1,
+    "ethyl.nicotinate": 2,
+    "aroma_hops_sum": 13
+  },
+  "rows_any_miss": 63,
+  "d7_all_nan": [
+    "palate_acetaldehyde",
+    "palate_acetate",
+    "palate_dentist"
+  ]
+}
