@@ -25,6 +25,13 @@ IGNORE_MARKERS = (
     "____", "Mx", "<", ">", "*", "…", "xxx",
     "外部资料/", "http://", "https://", "mailto:",
 )
+# 被 .gitignore 排除的本机目录：干净检出中必然不存在，引用它们是"本地临时/外挂"
+# 而非仓库文件，不作"缺失引用"报错（否则任何写了 编程/临时/ 的文档都会让 CI 变红）
+LOCAL_ONLY_PREFIXES = (
+    "编程/临时/",
+    "资料/原始资料/外部资料/",
+    "tmp/",
+)
 ABSOLUTE_PATTERNS = (
     re.compile(r"[A-Za-z]:[\\/]"),
     re.compile(r"/(?:Users|home)/"),
@@ -114,6 +121,8 @@ def main() -> int:
                 continue
             value = value.split()[0].rstrip("，。；;、")
             if not value:
+                continue
+            if value.startswith(LOCAL_ONLY_PREFIXES):
                 continue
             dest = (ROOT / value).resolve()
             if not dest.exists():
