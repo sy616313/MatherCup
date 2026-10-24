@@ -1,0 +1,251 @@
+{
+  "task": "TM2-01",
+  "role": "编程",
+  "milestone": "M2",
+  "version": "1.0",
+  "date": "2026-10-24",
+  "script": "编程/产出/脚本/Q2_共表达.py",
+  "inputs": {
+    "chemical_abundance": "数据/A/1.csv",
+    "compound_correlation": "数据/A/2.csv",
+    "sensory_matrix": "数据/A/4.csv",
+    "support_package": "数据/A/8.xlsx",
+    "candidate_pool": "审阅/规划/T0-Q2候选池.csv",
+    "name_alignment_M1": "建模/产出/化合物名称对齐-M1.csv",
+    "frozen_plan": "建模/产出/方案-M2.md"
+  },
+  "graph": {
+    "nodes": 226,
+    "node_source": "2.csv 的 231 节点剔除 4 个 Total* 与 Caloric value（口径 β/R15）",
+    "edge_rule": "i≠j 且 |rho_ij| >= tau 连边；无向简单图；边权 w_ij=|rho_ij|",
+    "tau": 0.3,
+    "tau_basis": "Bonferroni 临界 0.293754 向上取整（方案-M2 §1，台账 R21/B19）",
+    "edge_weight": "|rho_ij|",
+    "negative_edges": "负边按 |rho| 计入（边权与 s_direct 都取关联强度）",
+    "edges": 3758,
+    "positive_edges": 3362,
+    "negative_edges_count": 396,
+    "mean_degree": 33.2566,
+    "density": 0.147807,
+    "isolated_nodes": 4,
+    "components": 5,
+    "largest_component": 222
+  },
+  "scoring": {
+    "s_direct": "|Spearman(1.csv[c], 4.csv[d])|，按列内可用样本 pairwise，不插补",
+    "s_graph_neighborhood": "N(c) = {j != c : |rho_cj| >= 0.30}",
+    "s_graph_weight": "w_cj = |rho_cj|",
+    "s_graph_exclude_self": true,
+    "s_graph_na_policy": "邻居 s_direct 为 NA 时从分子分母同时剔除（重归一化）",
+    "s_graph_fallback": "无有效邻居（孤立点或邻居全 NA）时回退为 s_direct",
+    "s_graph": "s_graph(c,d) = sum_{j in N(c)} w_cj * s_direct(j,d) / sum w_cj",
+    "lambda": 0.7,
+    "formula": "score(c,d) = (1 - lambda) * s_direct(c,d) + lambda * s_graph(c,d)",
+    "tie_break": "score 降序；并列按 2csv 节点名 ASCII 升序",
+    "top_k": 3
+  },
+  "lambda_preregistration": {
+    "value": 0.7,
+    "date": "2026-10-24",
+    "source": "建模/产出/方案-M2.md §2（G-Q2 门材料，经审阅官验收，台账 R21/B21）",
+    "earlier_than_results": "是：lambda=0.70 于 2026-10-24 由 G-Q2 门材料预注册，早于任何最终 Top-3；本 JSON 是脚本对该冻结值的机器可读转录，脚本不参与选择 lambda",
+    "basis": [
+      "10 维主判据半分试点在 lambda=0.70 达峰；0.60/0.80 分别低 0.0075/0.0088",
+      "全 50 维敏感性峰值 0.80，0.70/0.75 分别低 0.0043/0.0001，0.70 在平台内",
+      "s_graph 跨化合物 SD 约为 s_direct 的 0.51 倍，raw lambda=0.70 的有效标准化权重约 0.54"
+    ],
+    "not_degenerate": {
+      "score_vs_s_direct_rank_corr_mean": 0.8693,
+      "score_vs_s_direct_rank_corr_min": 0.8137,
+      "nodes_with_nonempty_neighborhood": 222,
+      "note": "秩相关 <1，图项确实改变排序；lambda>0 且邻域非空节点占多数，图项不恒为 0"
+    }
+  },
+  "stability": {
+    "method": "甲（bootstrap）",
+    "B": 200,
+    "resample_unit": "250 个 beer 行（有放回）",
+    "seed": 20261024,
+    "rng": "numpy.random.default_rng(20261024)",
+    "graph_fixed": "题方 2.csv（tau=0.30），bootstrap 只传播 1.csv/4.csv 的样本抽样不确定性",
+    "output": "boot_freq1..3 = 全样本该名次化合物进入该维 Top-3 的频率",
+    "reason": "甲直接量化最终排序规则在样本扰动下的稳定性；GBM MDI 为 231x2 全局表、GBM SHAP 无感官维度列，均不能直接做逐维排序（方案-M2 §3）"
+  },
+  "dimension_category_mapping": {
+    "source": "数据/A/8.xlsx 的 Sensory names sheet",
+    "bridge_key": "R_name（与 4.csv 维度名逐字精确匹配）",
+    "category_column": "Category",
+    "row_number_rule": "Excel 行号（表头第 1 行，数据从第 2 行起）",
+    "matched": "50/50",
+    "nan_dimensions": [
+      "aftertaste",
+      "body",
+      "overall"
+    ],
+    "nan_policy": "记 Category 留空、是否可比=否；不得用 Category_Paper 或名称含义回填",
+    "category_counts": {
+      "Yeast": 12,
+      "Others": 12,
+      "Malt": 10,
+      "Hops": 10,
+      "Wild flora": 3
+    }
+  },
+  "chemical_category_consistency": {
+    "compound_side": "8.xlsx/Sensory thresholds 的 origin_paper",
+    "bridge": "经 M1 的 231/231 对齐表（1csv字段 ↔ 2csv节点名）桥接，禁用 chemical_name 直接匹配",
+    "rules": {
+      "一致": "origin_paper == 该维 Category",
+      "不可比": "origin_paper in {Spices, Internal standard solution, NaN} 或该维 Category 为 NaN",
+      "不一致": "其余"
+    },
+    "rate": "一致 / (一致 + 不一致)，分母不含不可比",
+    "counts": {
+      "一致": 48,
+      "不一致": 86,
+      "不可比": 16
+    },
+    "rate_value": 0.3582089552,
+    "noncomparable_dimensions": [
+      "aftertaste",
+      "body",
+      "overall"
+    ],
+    "noncomparable_compounds": [
+      "13-epi manool oxide",
+      "3-methyl-2-butenal",
+      "4-methoxysalicylaldehyde",
+      "Ambroxide",
+      "Camphor",
+      "Cinnamaldehyde",
+      "Cumin aldehyde",
+      "Dodecanal",
+      "E-ortho-methoxy cinnamaldehyde",
+      "Eoeniculin",
+      "Ethyl hydrocinnamate",
+      "Eugenol",
+      "Gamma-eudesmol",
+      "Manool",
+      "Manool oxide",
+      "Methyl isoeugenol",
+      "Methyl para-anisate",
+      "Perillyl acetate",
+      "Spathulenol",
+      "Terpinen-4-ol",
+      "Terpinolene",
+      "Trans-dihydro-β-terpineol",
+      "Valencene",
+      "α-eudesmol"
+    ],
+    "noncomparable_breakdown": {
+      "Spices": [
+        "13-epi manool oxide",
+        "4-methoxysalicylaldehyde",
+        "Ambroxide",
+        "Camphor",
+        "Cinnamaldehyde",
+        "Cumin aldehyde",
+        "Dodecanal",
+        "E-ortho-methoxy cinnamaldehyde",
+        "Eoeniculin",
+        "Ethyl hydrocinnamate",
+        "Eugenol",
+        "Gamma-eudesmol",
+        "Manool",
+        "Manool oxide",
+        "Methyl isoeugenol",
+        "Methyl para-anisate",
+        "Perillyl acetate",
+        "Spathulenol",
+        "Terpinen-4-ol",
+        "Terpinolene",
+        "Trans-dihydro-β-terpineol",
+        "Valencene",
+        "α-eudesmol"
+      ],
+      "Internal standard solution": [
+        "3-methyl-2-butenal"
+      ],
+      "NaN": []
+    }
+  },
+  "gbm_global_comparison": {
+    "table": "8.xlsx/GBM importance MDI（header=None 232 行，首行占位；去占位后 231 化合物 × 2 列）",
+    "unique_selected_compounds": 60,
+    "overlap": 60,
+    "share_of_selected": 1.0,
+    "share_of_mdi": 0.25974,
+    "mean_mdi_percentile_selected": 0.6201,
+    "mean_mdi_percentile_pool226": 0.4971,
+    "notice": "仅全局层面；该表无逐维信息，不作逐维对照"
+  },
+  "aggregate_columns": {
+    "columns": [
+      "esters_sum",
+      "aroma_hops_sum",
+      "acids_sum",
+      "sulfur_sum",
+      "kcalperc"
+    ],
+    "labels": [
+      "Total ester compounds",
+      "Total hop aroma compounds",
+      "Total acids",
+      "Total sulfur compounds",
+      "Caloric value"
+    ],
+    "excluded_from_top3": true,
+    "dims_exceeding_top1_sdirect": 16,
+    "dims_exceeding_top1_score": 33,
+    "comparison_note": "主口径按同度量 |Spearman| 与该维 Top-1 的 s_direct1 比较；与融合 score1 比较的结果另列，图平滑会压低 score1 从而高估超出面",
+    "max_abs_spearman": 0.729681
+  },
+  "robustness_checks": {
+    "T1_tau_0.25": 0.636,
+    "T1_tau_0.35": 0.674,
+    "T2_positive_only": 0.648,
+    "T3_lambda_0.30": 0.464,
+    "T3_lambda_0.50": 0.642,
+    "note": "不改主结果，只报与主口径 Top-3 的平均 Jaccard"
+  },
+  "results": {
+    "mean_jaccard_lambda0_vs_lambda_star": 0.378,
+    "median_jaccard": 0.35,
+    "jaccard_min": 0.0,
+    "jaccard_max": 1.0,
+    "overlap_count_distribution": {
+      "0": 3,
+      "1": 22,
+      "2": 21,
+      "3": 4
+    },
+    "stability_mean_freq": {
+      "rank1": 0.6734,
+      "rank2": 0.4896,
+      "rank3": 0.3611
+    },
+    "stability_cells_ge_0.80": 22,
+    "stability_cells_ge_0.50": 72,
+    "consistency_rate": 0.3582089552,
+    "lambda_comparison_table": "编程/产出/Q2_lambda对照.csv",
+    "md5_Q2_top3": "aef45a691ea908e5fa9e3ec26f724946",
+    "figures": [
+      "图集/M2/图M2-01-共表达网络.png",
+      "图集/M2/图M2-02-稳定性频率.png",
+      "图集/M2/图M2-03-lambda对照Jaccard.png",
+      "图集/M2/图M2-04-稳健性检查.png"
+    ]
+  },
+  "determinism": {
+    "rng": "numpy.random.default_rng(20261024)",
+    "tie_break": "2csv 节点名 ASCII 升序",
+    "float_format": "%.10f",
+    "md5_Q2_top3": "aef45a691ea908e5fa9e3ec26f724946"
+  },
+  "forbidden_metrics": [
+    "Pearson",
+    "欧氏距离",
+    "PCA"
+  ],
+  "environment": "python3 + pandas + numpy + scipy + matplotlib + networkx（版本见 编程/产出/环境/requirements.txt）"
+}

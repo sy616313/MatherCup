@@ -1,0 +1,78 @@
+指标,数值,说明
+节点数,226,2.csv 的 226 个候选节点
+边数,3758,|rho|>=0.3 的无序对
+正边数,3362,rho>=τ
+负边数,396,rho<=-τ；按 |rho| 计入边权
+密度,0.147807,E/(N(N-1)/2)
+平均度,33.2566,2E/N
+孤立点数,4,度=0 的节点
+连通分量数,5,无向连通分量
+最大连通分量,222,节点数
+τ,0.30,冻结（R21/B19）
+λ,0.70,预注册 2026-10-24（R21/B21）
+B,200,bootstrap 次数（R21/B22）
+种子,20261024,numpy default_rng
+λ=0 与 λ=0.70 的 Top-3 平均 Jaccard,0.3780000000,mean_d J_d
+Jaccard 中位数,0.3500000000,
+Jaccard 最小值,0.0000000000,
+Jaccard 最大值,1.0000000000,
+重合 0 个的维数,3,λ=0 与 λ=0.70 的 Top-3 交集
+重合 1 个的维数,22,
+重合 2 个的维数,21,
+重合 3 个的维数,4,
+score 与 s_direct 秩相关均值,0.8693,50 维跨化合物 Spearman
+score 与 s_direct 秩相关最小值,0.8137,
+s_graph/s_direct 标准差比,0.5087,50 维平均
+邻域非空节点数,222,226 节点中 s_graph 可由邻居计算的数量
+稳定性 rank1 平均入选频率,0.6734,boot_freq1
+稳定性 rank2 平均入选频率,0.4896,boot_freq2
+稳定性 rank3 平均入选频率,0.3611,boot_freq3
+boot_freq>=0.80 的格子数,22,共 150 格（50 维 × 3 名次）
+boot_freq>=0.50 的格子数,72,
+boot_freq<0.50 的格子数,78,
+boot_freq 最小值,0.1250,
+全部 boot_freq<0.20,否,任务书⑥稳定性触发条款
+品类一致数,48,"150 个 (维,化合物) 对"
+品类不一致数,86,
+品类不可比数,16,
+品类一致率,0.3582089552,一致/(一致+不一致)
+不可比维度,aftertaste; body; overall,Category 为 NaN，不用语义补填
+不可比化合物（Spices）,23,13-epi manool oxide; 4-methoxysalicylaldehyde; Ambroxide; Camphor; Cinnamaldehyde; Cumin aldehyde; Dodecanal; E-ortho-methoxy cinnamaldehyde; Eoeniculin; Ethyl hydrocinnamate; Eugenol; Gamma-eudesmol; Manool; Manool oxide; Methyl isoeugenol; Methyl para-anisate; Perillyl acetate; Spathulenol; Terpinen-4-ol; Terpinolene; Trans-dihydro-β-terpineol; Valencene; α-eudesmol
+不可比化合物（Internal standard solution）,1,3-methyl-2-butenal
+不可比化合物（NaN）,0,无
+不可比化合物合计,24,候选池 226 内
+不可比明细条数,16,见 Q2_品类一致性明细.csv
+独立假设参考基线,0.2047,Σ p_origin·p_dim，仅解释用，不作验收指标
+GBM 去重化合物数,60,50×3 合并去重
+GBM 重合数,60,与 MDI 231 化合物的交集
+GBM 占选中比例,1.000000,重合/去重选中
+GBM 占 MDI 比例,0.259740,重合/231
+GBM 选中平均分位,0.6201,MDI 全局重要度分位（无逐维信息）
+GBM 226 池平均分位,0.4971,同口径对照
+聚合列高于该维 Top-1（同口径 s_direct）的维数,16,聚合 |Spearman| vs 该维 Top-1 的 s_direct1
+聚合列高于该维 Top-1（融合 score）的维数,33,图平滑会压低 score1，此口径会高估超出面
+聚合列相关性最大值,0.729681,|Spearman|
+聚合 Total ester compounds 超出维数（s_direct）,9,均值 0.2168，最大 0.6499
+聚合 Total hop aroma compounds 超出维数（s_direct）,3,均值 0.1332，最大 0.4310
+聚合 Total acids 超出维数（s_direct）,4,均值 0.1126，最大 0.4773
+聚合 Total sulfur compounds 超出维数（s_direct）,3,均值 0.1361，最大 0.4031
+聚合 Caloric value 超出维数（s_direct）,9,均值 0.2414，最大 0.7297
+稳健性 λ=0（对照）,0.3780,λ 双设置对照（验收 3）；score=s_direct
+稳健性 T1 τ=0.25,0.6360,邻域阈值扰动；边数 5516
+稳健性 T1 τ=0.35,0.6740,邻域阈值扰动；边数 2474
+稳健性 T2 正边-only,0.6480,去掉负边后的敏感性；边数 3362
+稳健性 T3 λ=0.30,0.4640,图项权重扰动；同一张图
+稳健性 T3 λ=0.50,0.6420,图项权重扰动；同一张图
+行为测试::Jaccard 定义,通过,期望 0.5；实际 0.5
+行为测试::NA 邻居剔除后重归一,通过,"期望 [0.8, 0.0, 0.0]；实际 [0.8, 0.0, 0.0]"
+行为测试::孤立点回退 s_direct,通过,"期望 [0.0, 0.8, NaN]；实际 [0.0, 0.8, nan]"
+行为测试::λ=0 退化为 s_direct,通过,期望 全等；实际 True
+行为测试::λ=1 退化为 s_graph,通过,期望 全等；实际 True
+行为测试::τ 增大边数单调不增,通过,"期望 递减序列；实际 [25425, 5516, 3758, 2474, 246]"
+行为测试::τ=0 为完全图,通过,期望 25425；实际 25425
+行为测试::并列按 ASCII 升序,通过,"期望 [0, 1, 2]；实际 [0, 1, 2]"
+行为测试::Top-3 全部在 226 候选池且无聚合列,通过,期望 是；实际 True
+行为测试::维度映射 50 行且 NaN 三维,通过,"期望 {aftertaste, body, overall}；实际 ['aftertaste', 'body', 'overall']"
+行为测试::随机源固定可复现,通过,期望 两序列相同；实际 True
+行为测试::每维 Top-3 互不相同,通过,期望 是；实际 True
+确定性::Q2_top3.csv md5,aef45a691ea908e5fa9e3ec26f724946,同机重跑应一致

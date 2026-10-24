@@ -1,0 +1,151 @@
+dim,rank,compound,1csv字段,origin_paper,dim_Category,判定,不可比原因,计入分母,阈值表行号
+A_malt_all,1,Color,color.EBC.,Malt,Malt,一致,,是,134
+A_malt_all,2,Methylpyrazine,methylpyrazine,Malt,Malt,一致,,是,151
+A_malt_all,3,Protein,protein.g.L.,Others,Malt,不一致,,是,140
+A_malt_grain,1,Terpinen-4-ol,terpinen.4.ol,Spices,Malt,不可比,化合物 origin_paper=Spices,否,240
+A_malt_grain,2,Beta-phellandrene,beta.phellandrene,Hops,Malt,不一致,,是,175
+A_malt_grain,3,Sugars,GFS,Malt,Malt,一致,,是,65
+A_malt_bread,1,Color,color.EBC.,Malt,Malt,一致,,是,134
+A_malt_bread,2,Acetaldehyde,acetaldehyde,Yeast,Malt,不一致,,是,50
+A_malt_bread,3,Glycerol,glycerol,Yeast,Malt,不一致,,是,64
+A_malt_cara,1,Color,color.EBC.,Malt,Malt,一致,,是,134
+A_malt_cara,2,Methylpyrazine,methylpyrazine,Malt,Malt,一致,,是,151
+A_malt_cara,3,Protein,protein.g.L.,Others,Malt,不一致,,是,140
+A_malt_burn,1,Color,color.EBC.,Malt,Malt,一致,,是,134
+A_malt_burn,2,Isobutanol,isobutanol,Yeast,Malt,不一致,,是,29
+A_malt_burn,3,Diethyl sulfide,DES,Yeast,Malt,不一致,,是,154
+A_hops_all,1,Dimethyl sulfide,DMS,Malt,Hops,不一致,,是,155
+A_hops_all,2,Ethyl octanoate,ethyl_octanoate,Yeast,Hops,不一致,,是,94
+A_hops_all,3,Ethyl decanoate,ethyl_decanoate,Yeast,Hops,不一致,,是,85
+A_hops_citrus,1,Citronellol,citronellol,Hops,Hops,一致,,是,189
+A_hops_citrus,2,Humulene epoxide II,humulene.epoxide.II,Hops,Hops,一致,,是,211
+A_hops_citrus,3,Carbon dioxide,CO2.PSI.,Others,Hops,不一致,,是,133
+A_hops_tropical,1,Dimethyl sulfide,DMS,Malt,Hops,不一致,,是,155
+A_hops_tropical,2,Geraniol,geraniol,Hops,Hops,一致,,是,209
+A_hops_tropical,3,Styrene,styrene,Yeast,Hops,不一致,,是,141
+A_hops_noble,1,Ethyl decanoate,ethyl_decanoate,Yeast,Hops,不一致,,是,85
+A_hops_noble,2,Ethyl octanoate,ethyl_octanoate,Yeast,Hops,不一致,,是,94
+A_hops_noble,3,Dimethyl sulfide,DMS,Malt,Hops,不一致,,是,155
+A_hops_woody,1,Trans-dihydro-α-terpinyl acetate,trans.dihydro.alpha.terpinyl.acetate,Hops,Hops,一致,,是,245
+A_hops_woody,2,Z-β-farnesene,X.Z..beta.farnesene,Hops,Hops,一致,,是,251
+A_hops_woody,3,2-methylbutyl octanoate,X2.methylbutyl.octanoate,Yeast,Hops,不一致,,是,68
+A_esters_all,1,Phenethyl alcohol,phenethyl_alcohol,Yeast,Yeast,一致,,是,39
+A_esters_all,2,Acetaldehyde,acetaldehyde,Yeast,Yeast,一致,,是,50
+A_esters_all,3,Ethyl propionate,ethyl_propionate,Yeast,Yeast,一致,,是,98
+A_esters_ethac,1,Ethyl propionate,ethyl_propionate,Yeast,Yeast,一致,,是,98
+A_esters_ethac,2,Phenethyl alcohol,phenethyl_alcohol,Yeast,Yeast,一致,,是,39
+A_esters_ethac,3,Acetaldehyde,acetaldehyde,Yeast,Yeast,一致,,是,50
+A_esters_isoaa,1,Betaglucan,betaglucan.mg.L.,Malt,Yeast,不一致,,是,63
+A_esters_isoaa,2,Styrene,styrene,Yeast,Yeast,一致,,是,141
+A_esters_isoaa,3,"4,8-α-epoxy-caryophyllane",X4.8.alpha.epoxy.caryophyllane,Hops,Yeast,不一致,,是,163
+A_esters_flower,1,Beta-phellandrene,beta.phellandrene,Hops,Yeast,不一致,,是,175
+A_esters_flower,2,Caryophyllene,E.caryophyllene,Hops,Yeast,不一致,,是,181
+A_esters_flower,3,Alpha-terpineol,X1.alpha.terpineol,Hops,Yeast,不一致,,是,172
+A_esters_fruity,1,Lactic acid,lactic_acid.mg.L.,Wild flora,Yeast,不一致,,是,7
+A_esters_fruity,2,Iron,iron,Others,Yeast,不一致,,是,135
+A_esters_fruity,3,pH,pH,Others,Yeast,不一致,,是,138
+F_malt_all,1,Acetaldehyde,acetaldehyde,Yeast,Malt,不一致,,是,50
+F_malt_all,2,Ethanol,ethanol..v.v.,Yeast,Malt,不一致,,是,26
+F_malt_all,3,Color,color.EBC.,Malt,Malt,一致,,是,134
+F_malt_grain,1,Terpinen-4-ol,terpinen.4.ol,Spices,Malt,不可比,化合物 origin_paper=Spices,否,240
+F_malt_grain,2,Isoborneol,isoborneol,Others,Malt,不一致,,是,212
+F_malt_grain,3,Terpinen-4-ol acetate,terpinen.4.ol.acetate,Hops,Malt,不一致,,是,241
+F_malt_bread,1,Betaglucan,betaglucan.mg.L.,Malt,Malt,一致,,是,63
+F_malt_bread,2,Acetaldehyde,acetaldehyde,Yeast,Malt,不一致,,是,50
+F_malt_bread,3,Isobutanol,isobutanol,Yeast,Malt,不一致,,是,29
+F_malt_cara,1,Color,color.EBC.,Malt,Malt,一致,,是,134
+F_malt_cara,2,Acetaldehyde,acetaldehyde,Yeast,Malt,不一致,,是,50
+F_malt_cara,3,Betaglucan,betaglucan.mg.L.,Malt,Malt,一致,,是,63
+F_malt_burn,1,Methanethiol,MeSH,Yeast,Malt,不一致,,是,157
+F_malt_burn,2,Isobutanol,isobutanol,Yeast,Malt,不一致,,是,29
+F_malt_burn,3,Ethanol,ethanol..v.v.,Yeast,Malt,不一致,,是,26
+F_hops_all,1,Dimethyl sulfide,DMS,Malt,Hops,不一致,,是,155
+F_hops_all,2,Ethyl octanoate,ethyl_octanoate,Yeast,Hops,不一致,,是,94
+F_hops_all,3,Iso-alpha acids,bitterness,Hops,Hops,一致,,是,6
+F_hops_citrus,1,4-vinylguaiacol,X4VG,Yeast,Hops,不一致,,是,146
+F_hops_citrus,2,Color,color.EBC.,Malt,Hops,不一致,,是,134
+F_hops_citrus,3,Protein,protein.g.L.,Others,Hops,不一致,,是,140
+F_hops_tropical,1,Geraniol,geraniol,Hops,Hops,一致,,是,209
+F_hops_tropical,2,Methyl heptenone,X6.methyl.5.hepten.2.one,Yeast,Hops,不一致,,是,8
+F_hops_tropical,3,Terpinolene,terpinolene,Spices,Hops,不可比,化合物 origin_paper=Spices,否,242
+F_hops_noble,1,Ethyl octanoate,ethyl_octanoate,Yeast,Hops,不一致,,是,94
+F_hops_noble,2,Dimethyl sulfide,DMS,Malt,Hops,不一致,,是,155
+F_hops_noble,3,Iso-alpha acids,bitterness,Hops,Hops,一致,,是,6
+F_hops_woody,1,Ethyl decanoate,ethyl_decanoate,Yeast,Hops,不一致,,是,85
+F_hops_woody,2,Humulene epoxide II,humulene.epoxide.II,Hops,Hops,一致,,是,211
+F_hops_woody,3,Cis-dihydro-β-terpineol,cis.dihydro.beta.terpineol,Hops,Hops,一致,,是,186
+F_esters_all,1,Phenethyl alcohol,phenethyl_alcohol,Yeast,Yeast,一致,,是,39
+F_esters_all,2,Acetaldehyde,acetaldehyde,Yeast,Yeast,一致,,是,50
+F_esters_all,3,Ethyl propionate,ethyl_propionate,Yeast,Yeast,一致,,是,98
+F_esters_ethac,1,Ethyl propionate,ethyl_propionate,Yeast,Yeast,一致,,是,98
+F_esters_ethac,2,Ethyl acetate,ethyl_acetate,Yeast,Yeast,一致,,是,81
+F_esters_ethac,3,Acetaldehyde,acetaldehyde,Yeast,Yeast,一致,,是,50
+F_esters_isoaa,1,Phenethyl alcohol,phenethyl_alcohol,Yeast,Yeast,一致,,是,39
+F_esters_isoaa,2,Betaglucan,betaglucan.mg.L.,Malt,Yeast,不一致,,是,63
+F_esters_isoaa,3,Sugars,GFS,Malt,Yeast,不一致,,是,65
+F_esters_flower,1,Beta-phellandrene,beta.phellandrene,Hops,Yeast,不一致,,是,175
+F_esters_flower,2,Limonene,limonene,Hops,Yeast,不一致,,是,213
+F_esters_flower,3,Isopentyl butanoate,isopentyl.butanoate,Yeast,Yeast,一致,,是,107
+F_esters_fruity,1,Iron,iron,Others,Yeast,不一致,,是,135
+F_esters_fruity,2,Sugars,GFS,Malt,Yeast,不一致,,是,65
+F_esters_fruity,3,Protein,protein.g.L.,Others,Yeast,不一致,,是,140
+acidity,1,Acetic acid,acetic_acid.g.L.,Wild flora,Others,不一致,,是,3
+acidity,2,pH,pH,Others,Others,一致,,是,138
+acidity,3,4-ethyl-phenol,X4.ethyl.phenol,Wild flora,Others,不一致,,是,145
+bitternes,1,Iso-alpha acids,bitterness,Hops,Others,不一致,,是,6
+bitternes,2,Ethyl octanoate,ethyl_octanoate,Yeast,Others,不一致,,是,94
+bitternes,3,Dimethyl sulfide,DMS,Malt,Others,不一致,,是,155
+sweetness,1,Sugars,GFS,Malt,Others,不一致,,是,65
+sweetness,2,Octyl acetate,octyl_acetate,Yeast,Others,不一致,,是,115
+sweetness,3,Furfural,furfural,Malt,Others,不一致,,是,58
+X4vg,1,4-vinylguaiacol,X4VG,Yeast,Others,不一致,,是,146
+X4vg,2,Butyl acetate,butyl.acetate,Yeast,Others,不一致,,是,72
+X4vg,3,Betaglucan,betaglucan.mg.L.,Malt,Others,不一致,,是,63
+diacetyl,1,Sugars,GFS,Malt,Others,不一致,,是,65
+diacetyl,2,Eugenol,eugenol,Spices,Others,不可比,化合物 origin_paper=Spices,否,204
+diacetyl,3,Vinyl caprylate,vinyl.caprylate,Yeast,Others,不一致,,是,120
+dms,1,Protein,protein.g.L.,Others,Others,一致,,是,140
+dms,2,Color,color.EBC.,Malt,Others,不一致,,是,134
+dms,3,4-vinylguaiacol,X4VG,Yeast,Others,不一致,,是,146
+metallic,1,Sulfur dioxide,SO2.mg.L.,Yeast,Others,不一致,,是,159
+metallic,2,Phenethyl acetate,phenethyl_acetate,Yeast,Others,不一致,,是,118
+metallic,3,Ethyl 3-methylbutyrate,ethyl_isovalerate,Others,Others,一致,,是,77
+stale_hops,1,2-undecanol,X2.undecanol,Hops,Others,不一致,,是,15
+stale_hops,2,Allo-aromadendrene epoxide,alloaromadendrene.epoxide,Hops,Others,不一致,,是,165
+stale_hops,3,Neryl formate,neryl.formate,Hops,Others,不一致,,是,230
+t2n,1,Beta-phellandrene,beta.phellandrene,Hops,Others,不一致,,是,175
+t2n,2,Geraniol,geraniol,Hops,Others,不一致,,是,209
+t2n,3,Linalool,linalool,Hops,Others,不一致,,是,214
+orange,1,Camphor,camphor,Spices,Others,不可比,化合物 origin_paper=Spices,否,178
+orange,2,Beta-phellandrene,beta.phellandrene,Hops,Others,不一致,,是,175
+orange,3,Limonene,limonene,Hops,Others,不一致,,是,213
+coriander,1,Camphor,camphor,Spices,Others,不可比,化合物 origin_paper=Spices,否,178
+coriander,2,Limonene,limonene,Hops,Others,不一致,,是,213
+coriander,3,Terpinen-4-ol,terpinen.4.ol,Spices,Others,不可比,化合物 origin_paper=Spices,否,240
+clove,1,Limonene,limonene,Hops,Others,不一致,,是,213
+clove,2,Meta-cymenene,meta.cymenene,Hops,Others,不一致,,是,220
+clove,3,Eucalyptol,eucalyptol,Hops,Others,不一致,,是,203
+lactic,1,Lactic acid,lactic_acid.mg.L.,Wild flora,Wild flora,一致,,是,7
+lactic,2,Acetic acid,acetic_acid.g.L.,Wild flora,Wild flora,一致,,是,3
+lactic,3,pH,pH,Others,Wild flora,不一致,,是,138
+acetic,1,Acetic acid,acetic_acid.g.L.,Wild flora,Wild flora,一致,,是,3
+acetic,2,Ethyl 3-methylbutyrate,ethyl_isovalerate,Others,Wild flora,不一致,,是,77
+acetic,3,Lactic acid,lactic_acid.mg.L.,Wild flora,Wild flora,一致,,是,7
+barnyard,1,2-undecanol,X2.undecanol,Hops,Wild flora,不一致,,是,15
+barnyard,2,Allo-aromadendrene epoxide,alloaromadendrene.epoxide,Hops,Wild flora,不一致,,是,165
+barnyard,3,Neryl formate,neryl.formate,Hops,Wild flora,不一致,,是,230
+alcohol,1,Ethanol,ethanol..v.v.,Yeast,Yeast,一致,,是,26
+alcohol,2,Acetaldehyde,acetaldehyde,Yeast,Yeast,一致,,是,50
+alcohol,3,Isobutanol,isobutanol,Yeast,Yeast,一致,,是,29
+aftertaste,1,Ethyl octanoate,ethyl_octanoate,Yeast,,不可比,维度 Category 为 NaN,否,94
+aftertaste,2,Ethyl decanoate,ethyl_decanoate,Yeast,,不可比,维度 Category 为 NaN,否,85
+aftertaste,3,Isobutanol,isobutanol,Yeast,,不可比,维度 Category 为 NaN,否,29
+body,1,Ethanol,ethanol..v.v.,Yeast,,不可比,维度 Category 为 NaN,否,26
+body,2,Isobutanol,isobutanol,Yeast,,不可比,维度 Category 为 NaN,否,29
+body,3,Acetaldehyde,acetaldehyde,Yeast,,不可比,维度 Category 为 NaN,否,50
+co2,1,Ethyl octanoate,ethyl_octanoate,Yeast,Yeast,一致,,是,94
+co2,2,Ethyl hexanoate,ethyl_hexanoate,Yeast,Yeast,一致,,是,88
+co2,3,Dimethyl sulfide,DMS,Malt,Yeast,不一致,,是,155
+overall,1,Ethyl propionate,ethyl_propionate,Yeast,,不可比,维度 Category 为 NaN,否,98
+overall,2,Ethyl acetate,ethyl_acetate,Yeast,,不可比,维度 Category 为 NaN,否,81
+overall,3,Ethyl octanoate,ethyl_octanoate,Yeast,,不可比,维度 Category 为 NaN,否,94
