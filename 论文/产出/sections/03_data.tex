@@ -1,0 +1,70 @@
+\section{数据与预处理}
+
+\subsection{数据构成与统一口径}
+
+本题的数据分为化学测量、感官评分、化合物相关结构、外部证据和辅助说明五类。本文先按文件登记用途与规模，再统一样本键、特征名和维度顺序；后续各章只引用本表登记的口径，不在正文中另立一套数字。数据文件与用途如表 \ref{tab:data-files} 所示。
+
+\begin{table}[H]
+\centering
+\zihao{5}
+\begin{tabularx}{\textwidth}{@{}p{0.14\textwidth}p{0.15\textwidth}X p{0.28\textwidth}@{}}
+\toprule
+数据块 & 规模 & 主要内容 & 本文用途与处理 \\
+\midrule
+\texttt{1.csv} & \textbf{250}$\times$\textbf{234} & 样本标识、\textbf{231} 个化学特征 & 问题一输入；问题二计算逐维直接相关时按列内可用样本成对计算 \\
+\texttt{2.csv} & \textbf{231}$\times$\textbf{231} & 化合物之间的 Spearman 相关矩阵 & 问题二建图；剔除 \textbf{4} 个聚合列与热量列后保留 \textbf{226} 个候选节点 \\
+\texttt{3.xlsx} & 评分卡 & \textbf{0--6} 七档人工评分与公式 & 只用于核对分级语义与维度映射，不直接取数 \\
+\texttt{4.csv} & \textbf{250}$\times$\textbf{50} & \textbf{50} 个感官维度的连续标签 & 问题一目标；问题二逐维直接相关的另一侧 \\
+\texttt{5.csv} & \textbf{50}$\times$\textbf{50} & 感官维度之间的相关阵 & 独立证据 E2 的参照 \\
+\texttt{6.csv} & \textbf{44}$\times$\textbf{50} & 化学指标与感官维度的参考相关 & 独立证据 E1 的参照；\textbf{42} 个指标可映射到 \texttt{1.csv} \\
+\texttt{7.csv} & \textbf{186} 个属性 & 细粒度风味属性与三个视角 & 独立证据 E3 的参照；\textbf{39} 个属性可桥接 \\
+\texttt{8.xlsx} & 多工作表 & 阈值、可读名、来源品类、GBM 全局重要度 & 名称对齐、化学合理性核对与全局对照 \\
+\bottomrule
+\end{tabularx}
+\caption{数据文件、规模与本文用途}
+\label{tab:data-files}
+\end{table}
+
+表 \ref{tab:data-files} 中 \texttt{5.csv}、\texttt{6.csv} 与 \texttt{7.csv} 只作为独立证据，不参与问题一的训练，也不参与问题二的 Top-3 计算。这样安排的目的，是让“用来拟合的数据”和“用来核对的数据”保持分离，避免把同一份信息既当输入又当验证。
+
+\subsection{与题面口径的差异登记}
+
+题面对样本数、感官维度数和辅助表规模使用的是近似口径，与仓库内数据文件逐格核对后存在差异。按照“以数据文件为准、差异只登记不反过来改数据”的原则，本文统一采用表 \ref{tab:caliber} 的实测口径；题面数字只在表 \ref{tab:caliber} 中出现一次，后续正文不再使用。
+
+\begin{table}[H]
+\centering
+\zihao{5}
+\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.16\textwidth}p{0.16\textwidth}X@{}}
+\toprule
+项目 & 题面写法 & 实测口径 & 差异说明与处理 \\
+\midrule
+样本数 & \textbf{226} & \textbf{250} & \texttt{1.csv} 与 \texttt{4.csv} 均有 \textbf{250} 行，按 \texttt{beer} 键 250/250 对齐；以 \textbf{250} 为准 \\
+感官维度 & 约 \textbf{40} 维 & \textbf{50} 维 & \texttt{4.csv} 剔除 \texttt{beer}、\texttt{beer\_id}、\texttt{tasting\_category\_fine} 后为 \textbf{50} 列 \\
+化学特征 & 约 \textbf{226} 种 & \textbf{231} 个特征 & \textbf{231} = \textbf{226} 个单一化合物 + \textbf{4} 个聚合列 + \textbf{1} 个热量列 \\
+外部指标 & \textbf{46} 项 & \textbf{44} 项 & \texttt{6.csv} 实有 \textbf{44} 行；其中 \textbf{42} 项可映射到 \texttt{1.csv} \\
+细粒度属性 & \textbf{187} 项 & \textbf{186} 项 & \texttt{7.csv} 实有 \textbf{186} 个属性；其中 \textbf{39} 个可桥接到感官维度 \\
+\bottomrule
+\end{tabularx}
+\caption{题面口径与实测口径的差异登记}
+\label{tab:caliber}
+\end{table}
+
+除表 \ref{tab:caliber} 的规模差异外，源表还有三类需要注意的细节。第一，\texttt{4.csv} 与 \texttt{summary} 在三个维度名上存在拼写差异，例如 \texttt{A\_esters\_fruity} 与 \texttt{A\_ester\_fruity}，本文以 \texttt{4.csv} 为准。第二，\texttt{summary} 的 C 组列序与 \texttt{4.csv} 不同，任何按位置取列的做法都会错位，必须先按名称建索引。第三，\texttt{summary} 中 \texttt{barnyard} 与 \texttt{stale\_hops} 指向同一单元格，属于源表公式缺陷；本文直接使用 \texttt{4.csv} 的两列独立数据，缺陷只登记、不修复源文件。
+
+\subsection{缺失、变换与名称对齐}
+
+\texttt{1.csv} 的 \textbf{231} 个特征共有 \textbf{73} 个缺失格，占 \textbf{250}$\times$\textbf{231} 个格子的 \textbf{0.126\%}，分布在 \textbf{9} 列；缺失最多的是 \texttt{amyl.acetate}，有 \textbf{27} 格，其次是 \texttt{aroma\_hops\_sum} 的 \textbf{13} 格和 \texttt{methylpyrazine} 的 \textbf{12} 格。问题二建图使用 \texttt{2.csv} 的相关系数矩阵，不依赖逐样本完整行，因此不插补；问题一在训练折内按风格分组取中位数，组内样本少于 \textbf{5} 个时回退到全局中位数，并为 \textbf{9} 个有缺失的列各保留一列缺失标记，避免把“补过的值”和“原始值”混在一起。
+
+特征变换按列判定。对 \texttt{1.csv} 与校准表可比的 \textbf{70} 列逐列比较 \texttt{log10} 与自然对数，\textbf{70/70} 列都是 \texttt{log10} 的绝对误差更小，其中 \textbf{37} 列在 \texttt{log10} 下精确成立；另有 \textbf{33} 列本来就是原始量纲，不做反变换。这个判定直接影响问题三的浓度域，也影响问题一对 \textbf{33} 个原始量纲列的预处理：这 \textbf{33} 列在建模前做 \texttt{log10}$(x+10^{-6})$，其余 \textbf{198} 列保持原值。
+
+名称对齐是问题二的前置条件。\texttt{2.csv} 的节点名与 \texttt{1.csv} 的字段名并不完全一致，本文先做大小写、希腊字母和非字母数字的归一化，再用 \texttt{8.xlsx} 的 \texttt{field\_name\_R} 到 \texttt{chemical\_name} 的桥接表补齐，最终 \textbf{231/231} 个特征全部找到唯一节点，且没有重复目标。三处命名怪例（\texttt{dihydroiso}\allowbreak\texttt{caryophyllene.epoxide} 对 \texttt{Tobacarol}、\texttt{selin.11.en.4.alpha.ol} 对 \texttt{Kongol}、\texttt{X2.ethylhexylsalicylate} 对 \texttt{2-ethylhexyl acrylate}）按源表原样保留，不做人工改写。
+
+\subsection{预处理流程与防泄漏}
+
+问题一的预处理固定为六步，顺序不可交换。第一步按 \texttt{beer} 整数键对齐 \texttt{1.csv} 与 \texttt{4.csv}，250/250 全部命中；不使用 \texttt{beer\_id}，因为它在两张表中的精度不同。第二步对 \textbf{33} 个原始量纲列做 \texttt{log10}$(x+10^{-6})$。第三步在训练折内做分组中位数插补，并保留缺失标记。第四步在训练折内做 z-score 标准化，测试折只用训练折的均值和标准差。第五步保留 \texttt{4.csv} 的连续标签原值，不再做变换，以免破坏 ALR 锚点的语义。第六步保留全部 \textbf{250} 行样本，不删除异常样本。
+
+防泄漏的关键在第三、四步：插补参数和标准化参数都只从训练折估计，测试折不参与。折划分使用固定的五折索引，每折 \textbf{50} 个样本，所有模型、所有特征集、所有感官维度共用同一组折，保证不同方案之间的差异只来自模型或特征集，而不是折的随机性。问题二不训练预测器，只对 \texttt{1.csv} 与 \texttt{4.csv} 做成对秩相关，因此其缺失处理与问题一不同：不插补、不删行，按列内可用样本计算并在结果中保留样本量。
+
+\subsection{数据质量对建模的影响}
+
+数据质量对三问的影响并不相同。对问题一，\textbf{73} 个缺失格只占 \textbf{0.126\%}，但集中在少数列，若直接删行会损失样本，若用全表中位数又会把测试折信息带进训练，因此采用训练折内分组中位数加缺失标记。对问题二，\texttt{2.csv} 是题方给出的相关矩阵，不能按 \texttt{1.csv} 的缺失重新计算，否则会改变图结构；本文只把它当作固定的图输入，另用 \texttt{1.csv} 成对计算逐维直接相关。对问题三，\textbf{33} 个原始量纲列与 \textbf{37} 个对数可精确反解列的区分，决定了浓度域是否差一个数量级，必须在生成模型之前固定，不能等到生成后再补救。

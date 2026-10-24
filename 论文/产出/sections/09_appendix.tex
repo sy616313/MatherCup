@@ -1,0 +1,51 @@
+\section{附录}
+
+\subsection{AI 使用声明}
+
+本论文在数据核验、编程实现、图表生成与文字起草环节使用了人工智能工具辅助。工具名称：DeepSeek Harness；版本/型号：deepseek-flash；开发机构/公司：深度求索（DeepSeek）；版本发布日期：2026-10-24（本次运行所用版本）。
+
+具体使用环节如下：其一，数据口径核对与结果文件整理，由 AI 辅助读取与比对，最终数值以编程角色的结果文件为准；其二，问题一、问题二的建模代码与图表由 AI 辅助编写和生成，代码文件头已按要求写明 AI 工具、版本、机构与日期；其三，论文初稿的结构、段落与表格由 AI 辅助起草，队员对模型设定、数值与结论逐条复核；其四，文献线索与格式由 AI 辅助整理，引用条目均给出 DOI 或 URL，正文引用与文献表一一对应。
+
+逐处标注体例采用“来源表 + 题注 + 附录声明”三级。第一级是数值：正文中出现的每个定量结果都登记在数字源对照表中，给出源文件与列/行，正文不写无源数字。第二级是图表：每张图的题注注明图集稳定编号与数据来源，每个表的表注注明结果文件；图内不烧编号，编号由 LaTeX 自动生成。第三级是文字：AI 参与起草的段落统一在本小节声明，正文不把 AI 生成内容写成人工原创；涉及模型设定、公式与结论的句子由队员改写或复核。本文未使用无法溯源的模型或公式；所有公式均有文献依据或由本文给出推导。
+
+本队对论文的全部内容负责。AI 工具只作为辅助手段，不替代本队对数据、模型、结果与结论的判断。
+
+\subsection{复现材料与源码说明}
+
+论文的 LaTeX 主文件为 \texttt{论文/产出/}\allowbreak\texttt{main.tex}，分章源文件位于 \texttt{论文/产出/}\allowbreak\texttt{sections/}，图片位于 \texttt{论文/产出/}\allowbreak\texttt{figs/}，参考文献为 \texttt{论文/产出/}\allowbreak\texttt{refs.bib}。图表与图集的对应关系登记在 \texttt{论文/产出/}\allowbreak\texttt{图表映射.md}，正文数字与结果文件的对应关系登记在 \texttt{论文/产出/}\allowbreak\texttt{数字源对照-M4.csv}。
+
+编译在 \texttt{论文/产出} 目录下执行，顺序为：先运行 \texttt{xelatex main.tex}，再运行 \texttt{bibtex main}，最后再运行两次 \texttt{xelatex main.tex}。四次编译的退出码、日志中的缺字计数与引用计数记录在 \texttt{论文/产出/}\allowbreak\texttt{自检-M4.md}。
+
+问题一的结果文件包括 \texttt{编程/产出/Q1\_核验指标.csv}、\texttt{Q1\_逐维指标.csv}、\texttt{Q1\_分级频数.csv}、\texttt{Q1\_可读口径参数.json} 等；问题二的结果文件包括 \texttt{编程/产出/Q2\_核验指标.csv}、\texttt{Q2\_top3.csv}、\texttt{Q2\_稳健性.csv} 等。论文只读取这些文件，不修改其结果。问题三尚未开展实验，相关章节只登记路线，不包含结果数值。
+
+\begin{table}[H]
+\centering
+\zihao{-5}
+\begin{tabularx}{\textwidth}{@{}p{0.33\textwidth}p{0.47\textwidth}X@{}}
+\toprule
+文件或目录 & 作用 & 写者 \\
+\midrule
+\texttt{论文/产出/main.tex} & LaTeX 主文件与编译入口 & 论文 \\
+\texttt{论文/产出/sections/} & 九节分章源文件 & 论文 \\
+\texttt{论文/产出/figs/} & 从图集复制入文的图片 & 论文 \\
+\texttt{论文/产出/refs.bib} & 参考文献条目 & 论文 \\
+\texttt{论文/产出/数字源对照-M4.csv} & 正文数字到结果文件的回源表 & 论文 \\
+\texttt{论文/产出/图表映射.md} & 论文编号到图集编号的映射 & 论文 \\
+\texttt{编程/产出/Q1\_*.csv} & 问题一结果与检验数据 & 编程 \\
+\texttt{编程/产出/Q2\_*.csv} & 问题二结果与检验数据 & 编程 \\
+\texttt{图集/M2/}、\texttt{图集/M3/} & 论文所用图片的原始文件 & 编程 \\
+\bottomrule
+\end{tabularx}
+\caption{论文复现材料与源码清单}
+\label{tab:repro}
+\end{table}
+
+\subsection{数据与代码边界}
+
+本文使用的原始数据位于 \texttt{数据/A/}，为只读材料；口径规范、维度映射与阈值表由建模角色产出；结果文件与图集由编程角色产出。论文角色不写生产代码、不改结果文件与图集，只负责组织、解释与排版。若读者发现正文数字与结果文件不一致，应以结果文件为准，并按数字源对照表回溯到具体列/行。
+
+\subsection{提交前复核说明}
+
+提交前在仓库根目录执行 \texttt{python 工具/check\_paths.py}，并在仓库外干净检出中复跑同一脚本与完整编译链；两次输出、缺字计数与页数均记录在自检文件。源文件统一为 UTF-8 无 BOM、LF 换行；图表题注均位于对象下方，图内不写编号。
+
+复现时注意三点。第一，编译顺序必须是 \texttt{xelatex}、\texttt{bibtex}、\texttt{xelatex}、\texttt{xelatex}，只跑两遍 \texttt{xelatex} 会留下未定义引用。第二，中文渲染以日志中的缺字计数和 PDF 目检双重确认，不能只看编译是否退出成功。第三，正文所有定量表述都可在数字源对照表中找到源文件与列/行；若结果文件更新，应先更新对照表，再改正文。

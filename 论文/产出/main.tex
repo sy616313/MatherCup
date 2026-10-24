@@ -1,0 +1,51 @@
+\documentclass[UTF8,fontset=windows,zihao=-4,a4paper]{ctexart}
+
+% 页面与字体：正文小四宋体、单倍行距、无页眉、页脚居中页码
+\usepackage{geometry}
+\geometry{top=2.35cm,bottom=2.35cm,left=2.45cm,right=2.45cm}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figs/}}
+\captionsetup{font=small,labelfont=bf,labelsep=quad,justification=centering}
+\ctexset{
+  section/name={第,章},
+  section/format={\centering\heiti\zihao{4}},
+  section/beforeskip={1.0ex plus 0.3ex minus 0.2ex},
+  section/afterskip={0.8ex plus 0.2ex},
+  subsection/format={\heiti\zihao{-4}},
+  subsubsection/format={\heiti\zihao{-4}}
+}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.15em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.02}
+\setlist{nosep,leftmargin=2em}
+\renewcommand{\arraystretch}{1.12}
+
+\begin{document}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\input{sections/01_abstract}
+\input{sections/02_restatement}
+\input{sections/03_data}
+\input{sections/04_q1}
+\input{sections/05_q2}
+\input{sections/06_q3}
+\input{sections/07_evaluation}
+\input{sections/08_references}
+\input{sections/09_appendix}
+
+\end{document}
