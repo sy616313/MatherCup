@@ -1,0 +1,12 @@
+# Q2 共表达图 / Top-3 / 稳定性 —— 运行环境（TM2-01 · 2026-10-24）
+# 实测环境：Python 3.13.9（Windows 11，Anaconda）
+# 入口命令（在仓库根目录）：python 编程/产出/脚本/Q2_共表达.py
+# 说明：下表为本次交付实测版本；主脚本只依赖 pandas / numpy / scipy / matplotlib / networkx / openpyxl。
+# 换版本前须重跑并复核 编程/产出/Q2_核验指标.csv 的行为测试与确定性 md5。
+
+pandas==2.3.3
+numpy==2.3.5
+scipy==1.16.3
+matplotlib==3.10.6
+networkx==3.5
+openpyxl==3.1.5

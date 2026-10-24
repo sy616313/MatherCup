@@ -1,0 +1,51 @@
+dim,jaccard,overlap,lambda0_rank1,lambda0_rank2,lambda0_rank3,lambda070_rank1,lambda070_rank2,lambda070_rank3
+A_malt_all,0.5000000000,2,Color,Protein,pH,Color,Methylpyrazine,Protein
+A_malt_grain,0.5000000000,2,Terpinen-4-ol,Beta-phellandrene,Isoborneol,Terpinen-4-ol,Beta-phellandrene,Sugars
+A_malt_bread,0.5000000000,2,Color,Glycerol,Protein,Color,Acetaldehyde,Glycerol
+A_malt_cara,0.5000000000,2,Color,Protein,Acetaldehyde,Color,Methylpyrazine,Protein
+A_malt_burn,0.5000000000,2,Color,pH,Isobutanol,Color,Isobutanol,Diethyl sulfide
+A_hops_all,0.5000000000,2,Ethyl octanoate,E-2-nonenal,Ethyl decanoate,Dimethyl sulfide,Ethyl octanoate,Ethyl decanoate
+A_hops_citrus,1.0000000000,3,Citronellol,Humulene epoxide II,Carbon dioxide,Citronellol,Humulene epoxide II,Carbon dioxide
+A_hops_tropical,0.2000000000,1,Dimethyl sulfide,3-furanmethanol,Methyl geranate,Dimethyl sulfide,Geraniol,Styrene
+A_hops_noble,0.5000000000,2,Ethyl octanoate,Ethyl decanoate,E-2-nonenal,Ethyl decanoate,Ethyl octanoate,Dimethyl sulfide
+A_hops_woody,0.2000000000,1,Trans-dihydro-α-terpinyl acetate,α-calacorene,Ethyl tetradecanoate,Trans-dihydro-α-terpinyl acetate,Z-β-farnesene,2-methylbutyl octanoate
+A_esters_all,0.2000000000,1,N-hexanol,Acetaldehyde,Ethyl acetate,Phenethyl alcohol,Acetaldehyde,Ethyl propionate
+A_esters_ethac,0.2000000000,1,Ethyl acetate,Acetaldehyde,Ethanol,Ethyl propionate,Phenethyl alcohol,Acetaldehyde
+A_esters_isoaa,0.0000000000,0,N-hexanol,Isoamyl acetate,Isoamyl alcohol,Betaglucan,Styrene,"4,8-α-epoxy-caryophyllane"
+A_esters_flower,0.5000000000,2,Beta-phellandrene,Isobutyl acetate,Alpha-terpineol,Beta-phellandrene,Caryophyllene,Alpha-terpineol
+A_esters_fruity,0.0000000000,0,Beta-phellandrene,Eugenol,Protein,Lactic acid,Iron,pH
+F_malt_all,1.0000000000,3,Ethanol,Acetaldehyde,Color,Acetaldehyde,Ethanol,Color
+F_malt_grain,0.5000000000,2,Isoborneol,Terpinen-4-ol acetate,E-β-ionone,Terpinen-4-ol,Isoborneol,Terpinen-4-ol acetate
+F_malt_bread,0.2000000000,1,Acetaldehyde,Ethanol,Glycerol,Betaglucan,Acetaldehyde,Isobutanol
+F_malt_cara,0.5000000000,2,Color,Acetaldehyde,Protein,Color,Acetaldehyde,Betaglucan
+F_malt_burn,0.2000000000,1,Ethanol,pH,Iso-alpha acids,Methanethiol,Isobutanol,Ethanol
+F_hops_all,0.5000000000,2,Iso-alpha acids,Ethyl octanoate,E-2-nonenal,Dimethyl sulfide,Ethyl octanoate,Iso-alpha acids
+F_hops_citrus,0.2000000000,1,Protein,Humulene epoxide II,Ethyl furoate,4-vinylguaiacol,Color,Protein
+F_hops_tropical,0.2000000000,1,Geraniol,Hexyl acetate,Dimethyl sulfide,Geraniol,Methyl heptenone,Terpinolene
+F_hops_noble,0.5000000000,2,Iso-alpha acids,Ethyl octanoate,Ethyl decanoate,Ethyl octanoate,Dimethyl sulfide,Iso-alpha acids
+F_hops_woody,0.2000000000,1,Iso-alpha acids,Ethyl tetradecanoate,Ethyl decanoate,Ethyl decanoate,Humulene epoxide II,Cis-dihydro-β-terpineol
+F_esters_all,0.2000000000,1,Protein,Acetaldehyde,Ethyl acetate,Phenethyl alcohol,Acetaldehyde,Ethyl propionate
+F_esters_ethac,0.2000000000,1,Ethyl acetate,Ethanol,Glycerol,Ethyl propionate,Ethyl acetate,Acetaldehyde
+F_esters_isoaa,0.0000000000,0,N-hexanol,Protein,Isoamyl acetate,Phenethyl alcohol,Betaglucan,Sugars
+F_esters_flower,0.5000000000,2,Beta-phellandrene,Isopentyl butanoate,Terpinolene,Beta-phellandrene,Limonene,Isopentyl butanoate
+F_esters_fruity,0.2000000000,1,Diethyl sulfide,Protein,Acetic acid,Iron,Sugars,Protein
+acidity,0.2000000000,1,pH,Prenyl isobutyrate,Ethyl phenylacetate,Acetic acid,pH,4-ethyl-phenol
+bitternes,0.5000000000,2,Iso-alpha acids,Ethyl octanoate,Ethyl decanoate,Iso-alpha acids,Ethyl octanoate,Dimethyl sulfide
+sweetness,0.2000000000,1,Ethyl decanoate,Sugars,Pentyl octanoate,Sugars,Octyl acetate,Furfural
+X4vg,0.2000000000,1,4-vinylguaiacol,Terpiryl acetate,Neryl formate,4-vinylguaiacol,Butyl acetate,Betaglucan
+diacetyl,0.2000000000,1,Eugenol,Ethyl decanoate,α-calacorene,Sugars,Eugenol,Vinyl caprylate
+dms,0.5000000000,2,Protein,Color,Terpinen-4-ol,Protein,Color,4-vinylguaiacol
+metallic,0.2000000000,1,Ethyl 3-methylbutyrate,Iron,Methyl heptenone,Sulfur dioxide,Phenethyl acetate,Ethyl 3-methylbutyrate
+stale_hops,1.0000000000,3,2-undecanol,Allo-aromadendrene epoxide,Neryl formate,2-undecanol,Allo-aromadendrene epoxide,Neryl formate
+t2n,0.5000000000,2,Beta-phellandrene,Terpinen-4-ol,Geraniol,Beta-phellandrene,Geraniol,Linalool
+orange,0.5000000000,2,Camphor,Limonene,Ethanol,Camphor,Beta-phellandrene,Limonene
+coriander,0.2000000000,1,2-methyl-benzofuran,Ocimenone,Terpinen-4-ol,Camphor,Limonene,Terpinen-4-ol
+clove,0.5000000000,2,Limonene,Eucalyptol,Camphor,Limonene,Meta-cymenene,Eucalyptol
+lactic,0.5000000000,2,Lactic acid,Perillyl acetate,pH,Lactic acid,Acetic acid,pH
+acetic,0.2000000000,1,Prenyl isobutyrate,Ethyl 3-methylbutyrate,Ethyl phenylacetate,Acetic acid,Ethyl 3-methylbutyrate,Lactic acid
+barnyard,1.0000000000,3,2-undecanol,Neryl formate,Allo-aromadendrene epoxide,2-undecanol,Allo-aromadendrene epoxide,Neryl formate
+alcohol,0.2000000000,1,Ethanol,Glycerol,Ethyl octanoate,Ethanol,Acetaldehyde,Isobutanol
+aftertaste,0.2000000000,1,Ethanol,Ethyl octanoate,E-2-nonenal,Ethyl octanoate,Ethyl decanoate,Isobutanol
+body,0.2000000000,1,Ethanol,Glycerol,Ethyl hexanoate,Ethanol,Isobutanol,Acetaldehyde
+co2,0.5000000000,2,Ethyl octanoate,Ethanol,Ethyl hexanoate,Ethyl octanoate,Ethyl hexanoate,Dimethyl sulfide
+overall,0.5000000000,2,Ethyl acetate,Ethyl octanoate,Isoamyl acetate,Ethyl propionate,Ethyl acetate,Ethyl octanoate
