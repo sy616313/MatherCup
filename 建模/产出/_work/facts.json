@@ -1,0 +1,248 @@
+{
+ "shape": [
+  250,
+  234
+ ],
+ "n_numeric": 233,
+ "n_feature": 231,
+ "n_samples": 250,
+ "n_sum": 4,
+ "sum_names": [
+  "esters_sum",
+  "aroma_hops_sum",
+  "acids_sum",
+  "sulfur_sum"
+ ],
+ "n_kcal": 1,
+ "n_single": 226,
+ "n_missing": 73,
+ "miss_rate": 0.0012640692640692641,
+ "n_cols_with_na": 9,
+ "n_neg_cells": 10797,
+ "n_shared": 70,
+ "n_exact10": 37,
+ "n_log10_better": 70,
+ "inexact_mean_min": 1.0152307909374785,
+ "inexact_mean_max": 73.40433705477334,
+ "inexact_std0_min": 0.2806146399565015,
+ "inexact_std0_max": 794.6994026812276,
+ "inexact_median_le15": 15,
+ "neg_examples": [
+  {
+   "field": "acetaldehyde",
+   "beer": 10,
+   "x": -0.641741458,
+   "y": 0.22817,
+   "log10": -0.641741457599404
+  },
+  {
+   "field": "ethyl_acetate",
+   "beer": 10,
+   "x": -0.599349782,
+   "y": 0.251565,
+   "log10": -0.5993497820034767
+  }
+ ],
+ "cal_shape": [
+  250,
+  73
+ ],
+ "n_threshold_rows": 43,
+ "threshold_preview": [
+  {
+   "row": 3,
+   "field_py": "acetic acid.g.L.",
+   "field_R": "acetic_acid.g.L.",
+   "chem": "Acetic acid",
+   "unit": "g/L",
+   "calibrated": "yes",
+   "off": NaN,
+   "tmean": 0.14025,
+   "tmedian": 0.145
+  },
+  {
+   "row": 6,
+   "field_py": "bitterness",
+   "field_R": "bitterness",
+   "chem": "Iso-alpha acids",
+   "unit": "IBU",
+   "calibrated": "yes",
+   "off": NaN,
+   "tmean": 5.0,
+   "tmedian": 5.0
+  },
+  {
+   "row": 7,
+   "field_py": "lactic acid",
+   "field_R": "lactic_acid.mg.L.",
+   "chem": "Lactic acid",
+   "unit": "mg/L",
+   "calibrated": "yes",
+   "off": NaN,
+   "tmean": 416.6666667,
+   "tmedian": 400.0
+  },
+  {
+   "row": 26,
+   "field_py": "ethanol..v.v.",
+   "field_R": "ethanol..v.v.",
+   "chem": "Ethanol",
+   "unit": "v/v",
+   "calibrated": "yes",
+   "off": NaN,
+   "tmean": 1.757256,
+   "tmedian": 1.737199
+  },
+  {
+   "row": 28,
+   "field_py": "isoamyl alcohol",
+   "field_R": "isoamyl_alcohol",
+   "chem": "Isoamyl alcohol",
+   "unit": "mg/L",
+   "calibrated": "yes_gcms,yes",
+   "off": NaN,
+   "tmean": 40.015,
+   "tmedian": 45.0
+  },
+  {
+   "row": 29,
+   "field_py": "isobutanol",
+   "field_R": "isobutanol",
+   "chem": "Isobutanol",
+   "unit": "mg/L",
+   "calibrated": "yes_gcms,yes",
+   "off": NaN,
+   "tmean": 80.0,
+   "tmedian": 100.0
+  },
+  {
+   "row": 39,
+   "field_py": "phenethyl alcohol",
+   "field_R": "phenethyl_alcohol",
+   "chem": "Phenethyl alcohol",
+   "unit": "mg/L",
+   "calibrated": "yes_gcms, yes",
+   "off": NaN,
+   "tmean": 35.01,
+   "tmedian": 32.5
+  },
+  {
+   "row": 50,
+   "field_py": "acetaldehyde",
+   "field_R": "acetaldehyde",
+   "chem": "Acetaldehyde",
+   "unit": "mg/L",
+   "calibrated": "yes",
+   "off": "pungent, rotten-apples, green apple",
+   "tmean": 50.0,
+   "tmedian": 50.0
+  },
+  {
+   "row": 58,
+   "field_py": "furfural",
+   "field_R": "furfural",
+   "chem": "Furfural",
+   "unit": "mg/L",
+   "calibrated": "yes_gcms",
+   "off": NaN,
+   "tmean": 60.0,
+   "tmedian": 37.5
+  },
+  {
+   "row": 64,
+   "field_py": "glycerol",
+   "field_R": "glycerol",
+   "chem": "Glycerol",
+   "unit": "g/L",
+   "calibrated": "yes",
+   "off": NaN,
+   "tmean": 4.433333333,
+   "tmedian": 2.0
+  }
+ ],
+ "n_map": 50,
+ "spelling_diff": [
+  {
+   "c4": "A_esters_fruity",
+   "summary": "A_ester_fruity"
+  },
+  {
+   "c4": "F_esters_fruity",
+   "summary": "F_ester_fruity"
+  },
+  {
+   "c4": "acidity",
+   "summary": "body"
+  },
+  {
+   "c4": "sweetness",
+   "summary": "co2"
+  },
+  {
+   "c4": "X4vg",
+   "summary": "aftertaste"
+  },
+  {
+   "c4": "diacetyl",
+   "summary": "alcohol"
+  },
+  {
+   "c4": "dms",
+   "summary": "sweetness"
+  },
+  {
+   "c4": "metallic",
+   "summary": "acidity"
+  },
+  {
+   "c4": "stale_hops",
+   "summary": "dms"
+  },
+  {
+   "c4": "t2n",
+   "summary": "metallic"
+  },
+  {
+   "c4": "orange",
+   "summary": "4vg"
+  },
+  {
+   "c4": "coriander",
+   "summary": "t2n"
+  },
+  {
+   "c4": "clove",
+   "summary": "diacetyl"
+  },
+  {
+   "c4": "lactic",
+   "summary": "stale_hops"
+  },
+  {
+   "c4": "acetic",
+   "summary": "orange"
+  },
+  {
+   "c4": "barnyard",
+   "summary": "coriander"
+  },
+  {
+   "c4": "alcohol",
+   "summary": "clove"
+  },
+  {
+   "c4": "aftertaste",
+   "summary": "lactic"
+  },
+  {
+   "c4": "body",
+   "summary": "acetic"
+  },
+  {
+   "c4": "co2",
+   "summary": "barnyard"
+  }
+ ],
+ "barnyard_formula": "=beer_1!$Q$94",
+ "stale_formula": "=beer_1!$Q$82"
+}

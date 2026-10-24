@@ -29,9 +29,12 @@ ABSOLUTE_PATTERNS = (
     re.compile(r"[A-Za-z]:[\\/]"),
     re.compile(r"/(?:Users|home)/"),
     re.compile(r"file://"),
-    # UNC 形如 \\server\share：要求反斜杠后紧跟主机名，避免把 LaTeX 换行符 \\ 误判
-    re.compile(r"\\\\[A-Za-z0-9_.$-]+\\"),
+    # UNC 形如 \\server\share：主机名至少 2 字符，避免把 LaTeX 换行符 \\、
+    # 以及 Python 字符串里的 \\r\\n 转义误判
+    re.compile(r"\\\\[A-Za-z0-9_.$-]{2,}\\"),
 )
+# 网址里的 "s:/" 会被盘符正则误判，扫描绝对路径前先把网址区间排除
+URL_RE = re.compile(r"(?:https?|ftp)://[^\s)>\]]+")
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 CODE_RE = re.compile(r"`([^`\n]+)`")
 
@@ -74,8 +77,11 @@ def main() -> int:
         if "\ufffd" in text:
             errors.append(f"{rel}: 不是有效 UTF-8")
 
+        url_spans = [(m.start(), m.end()) for m in URL_RE.finditer(text)]
         for pattern in ABSOLUTE_PATTERNS:
             for match in pattern.finditer(text):
+                if any(start <= match.start() < end for start, end in url_spans):
+                    continue
                 errors.append(f"{rel}:{line_of(text, match.start())}: 绝对路径 `{match.group(0)}`")
 
         if path.suffix.lower() == ".md":

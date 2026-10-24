@@ -1,0 +1,14 @@
+{
+ "ident_neg_total": 0,
+ "miss_by_col": {
+  "X2.3.butanedione": 9,
+  "X3.methylbutanal": 7,
+  "ethyl.isobutyrate": 1,
+  "methylpyrazine": 12,
+  "furfural": 1,
+  "amyl.acetate": 27,
+  "phenylacetaldehyde": 1,
+  "ethyl.nicotinate": 2,
+  "aroma_hops_sum": 13
+ }
+}

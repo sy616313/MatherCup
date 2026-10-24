@@ -1,0 +1,10 @@
+化合物,field_name_python,1csv字段,数值,统计量,单位,变换方式,来源分级,出处,备注
+Acetaldehyde,acetaldehyde,acetaldehyde,50.0,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 50 行,中位数 50.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Diacetyl,"2,3-butanedione",X2.3.butanedione,0.29925,threshold_mean（均值）,mg/L,原始量纲（1.csv 中未取对数）,数据集原生,8.xlsx/Sensory thresholds 第 127 行,中位数 0.09（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+4-vinylguaiacol,X4VG,X4VG,0.206333,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 146 行,中位数 0.2（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Diethyl sulfide,DES,DES,1.2,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 154 行,中位数 1.2（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Dimethyl sulfide,DMS,DMS,17.25,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 155 行,中位数 19.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Hydrogen sulfide,H2S,H2S,3.5,threshold_mean（均值）,ug/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 156 行,中位数 3.5（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+Sulfur dioxide,SO2-mg.L.,SO2.mg.L.,15.333333,threshold_mean（均值）,mg/L,log10（1.csv 中为对数值）,数据集原生,8.xlsx/Sensory thresholds 第 159 行,中位数 11.0（仅参考，Q3 统一用均值）；用于 Q3 超阈值判定
+trans-2-nonenal,X.E..2.nonenal,X.E..2.nonenal,0.00011,外部文献值（单点）,mg/L,原始量纲（1.csv 中未取对数）,外部文献（数据集无阈值）,Rychlik/Schieberle/Grosch 1998 阈值汇编（beer_orthonasal 0.110 ppb），经 CompKitchen 化合物页引用；检索记录见 建模/产出/阈值检索-M1.md §二,0.11 µg/L = 0.00011 mg/L；换算依据 1 µg/L = 0.001 mg/L；外部文献、非数据集原生，论文引用须标注来源
+Methanethiol (MeSH),MeSH,MeSH,1.0,外部文献值（单点）,ug/L,log10（1.csv 中为对数值）,外部文献（数据集无阈值）,Enartis《Sulfide Sensory Thresholds and Aroma Descriptions》(2019) 表头单位 ng/mL；检索记录见 建模/产出/阈值检索-M1.md §二,1 ng/mL = 1 µg/L；与数据集同表三个共同项（H2S/DES/DMS）同量级，见检索报告校准表
