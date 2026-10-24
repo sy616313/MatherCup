@@ -1,0 +1,31 @@
+{
+  "task": "TM3-01",
+  "version": "v1.0",
+  "generated_at": "2026-10-24 17:28:50",
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "pandas": "2.3.3",
+  "scipy": "1.16.3",
+  "sklearn": "1.7.2",
+  "seed": 2026,
+  "n_folds": 5,
+  "main_model": "RandomForest",
+  "featureset": "F0",
+  "input_sha256": {
+    "1.csv": "419849227a02e0c792cd405e6865035b7f58af1a92efa362dbb68a7ca2882f69",
+    "4.csv": "43a7b38682ed81ce64d97ebc1874c09dffac023ade4877f34e3c83ef7d42dc1c",
+    "q1_anchors.csv": "2c62ed0520c5b0ebb427b9b83c0843f473ecb2fbf5019392d01b2476fec29514"
+  },
+  "runtime_seconds": 1129.8,
+  "stop_lines_hit": [
+    "SL2",
+    "SL3",
+    "SL4"
+  ],
+  "stop_lines_open": [],
+  "adjudication": {
+    "date": "2026-10-24",
+    "q1": "接受现状并完成交付：按 OOF+ALR 原样交 0–6 表，在自检/报告/论文登记 T2/T7/T8 实测值与机理；人类豁免任务书 ④-12/14/15 的通过判据；不拉伸预测、不改锚点。",
+    "q2": "E1 行级 N_ns 只计数据可得性（①未映射、②n<30、④r_hat NaN）；③|r_ref|<r_crit 只作单元级指标剔除。"
+  }
+}

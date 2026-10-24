@@ -1,0 +1,74 @@
+column,beer,row_index,imputed_value,source,fit_scope
+X2.3.butanedione,33,13,-0.9325155480,group_median:Fruitbeer,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,44,25,-1.0518923067,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,223,31,-1.9208018530,group_median:Low/No alcohol,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,26,69,-0.4792510091,group_median:West Flanders ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,176,77,-0.4792510091,group_median:West Flanders ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,129,91,-0.6980064950,group_median:Brown,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,119,104,-1.2871668814,group_median:Pils/Lager,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,28,171,-1.2871668814,group_median:Pils/Lager,全量 250 行（审计口径；模型折内插补按训练折重算）
+X2.3.butanedione,199,232,-0.5381670497,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,10,0,-2.6465515748,group_median:Low/No alcohol,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,44,25,-1.1565718271,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,190,33,-0.9647386887,global_median,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,28,171,-1.4865360601,group_median:Pils/Lager,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,108,191,-1.1180665045,group_median:Brown,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,235,203,-0.6144512412,group_median:Strong ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+X3.methylbutanal,199,232,-0.9305387823,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+ethyl.isobutyrate,177,105,-2.2256721213,group_median:Fruitbeer,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,228,35,-4.3310608111,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,224,48,-4.7055337738,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,58,52,-3.7101101776,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,70,75,-4.3045801181,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,219,90,-3.8345390260,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,118,149,-3.6008902816,group_median:West Flanders ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,28,171,-3.8818260228,group_median:Pils/Lager,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,8,182,-3.8345390260,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,121,195,-4.3045801181,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,199,232,-4.3310608111,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,3,238,-4.3045801181,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+methylpyrazine,196,246,-2.8634420860,group_median:Strong ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+furfural,58,52,-2.5112593917,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,48,6,-2.3636851676,group_median:Dubbel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,165,7,-3.2750422262,group_median:Fruitbeer,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,207,9,-3.2750422262,group_median:Fruitbeer,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,77,17,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,111,43,-2.3636851676,group_median:Dubbel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,54,49,-2.9961544608,group_median:Kriek,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,5,50,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,20,59,-2.2688887265,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,194,62,-2.3636851676,group_median:Dubbel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,62,67,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,232,70,-2.9961544608,group_median:Kriek,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,138,74,-2.9961544608,group_median:Kriek,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,49,121,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,193,124,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,29,131,-2.2688887265,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,18,141,-2.7260004198,group_median:Lambic,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,32,144,-2.2815714747,group_median:Amber,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,13,146,-1.9985716392,group_median:Christmas,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,104,162,-2.2461853791,group_median:Strong ale,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,101,163,-2.6897671352,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,144,170,-2.7260004198,group_median:Lambic,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,187,192,-2.3636851676,group_median:Dubbel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,229,213,-3.5360473183,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,217,220,-3.1621755414,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,140,227,-3.1621755414,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,239,241,-3.1621755414,group_median:Tripel,全量 250 行（审计口径；模型折内插补按训练折重算）
+amyl.acetate,103,244,-2.0802557402,group_median:Stout/Porter,全量 250 行（审计口径；模型折内插补按训练折重算）
+phenylacetaldehyde,153,173,-2.8445406768,group_median:Kriek,全量 250 行（审计口径；模型折内插补按训练折重算）
+ethyl.nicotinate,10,0,-3.2952748096,group_median:Low/No alcohol,全量 250 行（审计口径；模型折内插补按训练折重算）
+ethyl.nicotinate,29,131,-2.4601949989,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,64,21,2.0974414750,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,158,47,1.8044467970,group_median:Amber,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,224,48,3.3365411835,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,172,56,3.3365411835,group_median:Wheat,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,7,66,2.3207299820,group_median:Saison,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,151,71,1.9895275050,global_median,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,219,90,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,39,125,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,80,138,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,120,139,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,27,145,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,143,209,2.6559201250,group_median:Hoppy,全量 250 行（审计口径；模型折内插补按训练折重算）
+aroma_hops_sum,73,217,2.0974414750,group_median:Blond,全量 250 行（审计口径；模型折内插补按训练折重算）
