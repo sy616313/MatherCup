@@ -1,0 +1,52 @@
+section,item,metric,value,criterion,verdict,note
+模型选型,Ridge,50 维平均 CV R²（折均）,-0.658513653818569,仅对照,记录,线性不可用
+模型选型,RandomForest,50 维平均 CV R²（折均）,0.23042164740809684,,候选,
+模型选型,HistGradientBoosting,50 维平均 CV R²（折均）,0.13425440139239897,,候选,
+模型选型,主模型,模型名,RandomForest,,选定,
+模型选型,三模型,50 维平均 CV R²（OOF 全局）,"{""Ridge"": -0.497737, ""RandomForest"": 0.257865, ""HistGradientBoosting"": 0.185025}",,对照,
+基线,T0 B13 登记值,50 维平均 R²（OOF 全局）,0.243,,对照,状态板 B13；本机按 05_A基线.py 同管线复算见下两行
+基线,T0 基线复算,50 维平均 R²（OOF 全局）,0.237724,,对照,本机复算（环境版本差异）
+基线,T0 基线复算,50 维平均 R²（折均）,0.212228,,对照,同折划分口径
+特征集,F0,50 维平均 CV R²（折均）,0.230516879784407,,报全,
+特征集,F1,50 维平均 CV R²（折均）,0.23042164740809684,,报全,
+特征集,F2,50 维平均 CV R²（折均）,0.23166576967472644,,报全,
+特征集,决策,R²(F1)-R²(F0),-9.523237631015036e-05,≥0.02,否,
+特征集,决策,R²(F2)-R²(F1),0.0012441222666295937,≥0.02,否,
+特征集,决策,命中步骤/采用,步骤3 → F0,T0 §六,执行,
+T1,单调性,50 维全过,1,非降且仅 0–6 且各级平台存在,通过,50/50 维含全部 7 级平台
+T2,保序一致,"min ρ(z, s_ref)",0.6574936882067656,≥0.99,不通过,检验规则保序性，不是与真值一致（0–6 无真值）
+T3,参考分级频数,7 类频数表,见 Q1_参考分级频数.csv,须报告,已报,参考分级等级数 min=6
+T3,参考分级等级数,7 级 / 6 级的维数,45 / 5,min ≥5,通过,T8(a) 不命中
+T4,边界确定性,50 维六类输入,1,"0,0,6,6,中位数分级,3 且两次一致",通过,A_malt_all 第六类 x≈0.388267
+T5,往返误差,复原率,1.0,=1.0,通过,12500/12500
+T6,锚点敏感性 min/max,分级同分率（50 维均值）,0.8308000000000001,只报告,记录,min=0.368000
+T6,锚点敏感性 P1/P99,分级同分率（50 维均值）,0.8890399999999999,只报告,记录,min=0.672000
+T7,信息损失,"min Spearman(分级, OOF 连续)",0.5470218896234077,≥0.95,不通过,50 个数见 Q1_信息损失.csv
+T8,塌缩维,实际使用等级数 ≤3 的维数,19,≤5,不通过,A_malt_grain;A_malt_bread;A_malt_cara;A_hops_citrus;A_hops_woody;A_esters_ethac;A_esters_flower;A_esters_fruity;F_malt_grain;F_malt_bread;F_hops_citrus;F_hops_woody;F_esters_flower;F_esters_fruity;diacetyl;metallic;stale_hops;t2n;barnyard
+T8,最少年级数,任一维实际使用等级数,2,≥3,不通过,≤2 级维：A_malt_bread;F_esters_flower;diacetyl
+E1,映射,N_map（44 行可映射）,42,上限 44,记录,2 行 N_ns：Iso-alpha acids、Sugars
+E1,逐格,有效格数,949,共 2200,记录,N_ns 1251 格（0.5686）
+E1,平均绝对差,mean|r_pred-r_ref|,0.12012039204205072,≤0.25,通过,
+E1,方向一致率,D1,0.9968387776606955,≥0.60,通过,
+E1,行级剔除,N_ns 占比 >30% 的化合物,Iso-alpha acids;Sugars,,记录,
+E2,平均绝对差,mean|R_hat-R5|（1225 对）,0.17194173550074338,≤0.20,一致,
+E2,方向一致率,D2,0.809795918367347,只报告,记录,
+E3,映射,N_map,39,39,记录,4 冲突 + 1 非描述符 + 142 未桥接，见 Q1_E3映射.csv
+E3,不可判,N_ns（|rho_lab|<0.05）,5,,记录,
+E3,有效映射,N_eff,34,≥20 才判 R3,记录,
+E3,方向一致率,R3,0.9705882352941176,≥0.60 通过 / 0.50–0.60 提示 / <0.50 停机,通过,
+鲁棒性,mask 0%,50 维平均 R²（折均）,0.230516879784407,,记录,分级一致率=1.000000；ΔR²=+0.000000
+鲁棒性,mask 5%,50 维平均 R²（折均）,0.22657769433951802,,记录,分级一致率=0.965760；ΔR²=-0.003939
+鲁棒性,mask 10%,50 维平均 R²（折均）,0.22558088690402758,,记录,分级一致率=0.934800；ΔR²=-0.004936
+鲁棒性,mask 20%,50 维平均 R²（折均）,0.21213021409306723,,记录,分级一致率=0.888240；ΔR²=-0.018387
+缺失,插补清单,73 格,73,,记录,组中位数命中 71 格，全局中位数 2 格
+缺失,缺失事实,缺失格 / 列数 / 含缺失行,"{""cells"": 73, ""cols"": 9, ""rows"": 63}",,记录,amyl.acetate 27 格
+停机线,SL1,主模型 50 维平均 CV R² ≥ 0.243（T0 基线）,折均 0.230517；OOF 全局 0.256484,,PASS,0.243 为 B13 的 OOF 全局口径；同口径本模型更高，折均口径与同折基线 0.2122 比亦更高
+停机线,SL2,"T2 逐维 ρ(连续标签, 参考分级) ≥ 0.99",min=0.657494,,HIT,检验规则保序性，非与真值一致；人类 2026-10-24 裁定接受（停机上报-M3-1 §6 Q1）；按 OOF+ALR 原样交付并在报告/论文登记实测值与机理
+停机线,SL3,T7 信息损失逐维 Spearman ≥ 0.95,min=0.547022,,HIT,A_malt_all; A_malt_grain; A_malt_bread; A_malt_cara; A_malt_burn; A_hops_all; A_hops_citrus; A_hops_tropical; A_hops_noble; A_hops_woody; A_esters_all; A_esters_ethac; A_esters_isoaa; A_esters_flower; A_esters_fruity; F_malt_all; F_malt_grain; F_malt_bread; F_malt_cara; F_malt_burn; F_hops_all; F_hops_citrus; F_hops_tropical; F_hops_noble; F_hops_woody; F_esters_all; F_esters_ethac; F_esters_isoaa; F_esters_flower; F_esters_fruity; acidity; bitternes; sweetness; X4vg; diacetyl; dms; metallic; stale_hops; t2n; orange; coriander; clove; lactic; acetic; barnyard; alcohol; aftertaste; body; co2; overall；人类 2026-10-24 裁定接受（停机上报-M3-1 §6 Q1）；按 OOF+ALR 原样交付并在报告/论文登记实测值与机理
+停机线,SL4,分级退化（参考等级数≥5、塌缩维≤5、无视≤2 级）,参考等级数 min=6；塌缩维=19；≤2 级维=3,,HIT,；人类 2026-10-24 裁定接受（停机上报-M3-1 §6 Q1）；按 OOF+ALR 原样交付并在报告/论文登记实测值与机理
+停机线,SL5,E1 平均绝对差 ≤0.25 且方向一致率 ≥0.6,mean_abs=0.120120；D1=0.996839；有效格=949,,PASS,
+停机线,SL6,E3 N_eff≥20 时 R_3 ≥0.50,N_eff=34；R3=0.970588,,PASS,
+裁定,停机线,人类裁定,Q1 接受现状并完成交付；Q2 E1 行级只计数据可得性,2026-10-24,记录,停机上报-M3-1.md §8；不拉伸预测、不改锚点
+确定性,双跑用时,冷跑 A / B（秒）,1118 / 1137,,记录,两次评分表与 OOF 表 md5 均一致
+确定性,双跑 md5,评分表 / OOF 表,f98cb535… / 95c13edf…,,记录,完整 md5 见自检-M3.md §3.6

@@ -1,0 +1,4 @@
+model,role,mean_R2_fold,mean_R2_oof,mean_MAE_fold,n_dims
+Ridge,对照（不参与选型）,-0.6585136538,-0.4977373052,0.5038858919,50
+RandomForest,候选,0.2304216474,0.2578649997,0.3389741063,50
+HistGradientBoosting,候选,0.1342544014,0.1850252964,0.3523548472,50
