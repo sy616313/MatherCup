@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
-"""5.csv / 6.csv 差异量化。"""
+"""5.csv / 6.csv 差异量化。
+
+在仓库根目录运行：python 建模/产出/_work/diff56.py
+路径可用环境变量覆盖（缺省值按仓库根目录解析，不写死本机盘符路径）：
+  DESKTOP_ATTACH  原始附件目录，缺省 ../题目/_extracted/A/附件
+  REPO_DATA       仓库数据目录，缺省 数据/A
+"""
+import os
 import pathlib
 
 import numpy as np
 import pandas as pd
 
-A = pathlib.Path(r"C:\Users\33836\Desktop\附件")
-B = pathlib.Path(r"C:\Users\33836\Documents\deepseek-harness\default-workspace\MatherCup\数据\A")
+A = pathlib.Path(os.environ.get("DESKTOP_ATTACH", "../题目/_extracted/A/附件"))
+B = pathlib.Path(os.environ.get("REPO_DATA", "数据/A"))
 
 for name in ["5.csv", "6.csv"]:
     a = pd.read_csv(A / name, encoding="utf-8-sig", index_col=0)

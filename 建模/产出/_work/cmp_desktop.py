@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
-"""比较桌面附件与仓库 数据/A 的语义差异（忽略换行差异）。"""
+"""比较题目原始附件与仓库 数据/A 的语义差异（忽略换行差异）。
+
+在仓库根目录运行：python 建模/产出/_work/cmp_desktop.py
+路径可用环境变量覆盖（缺省值按仓库根目录解析，不写死本机盘符路径）：
+  DESKTOP_ATTACH  原始附件目录，缺省 ../题目/_extracted/A/附件
+  REPO_DATA       仓库数据目录，缺省 数据/A
+"""
 import hashlib
+import os
 import pathlib
 
 import pandas as pd
 
-A = pathlib.Path(r"C:\Users\33836\Desktop\附件")
-B = pathlib.Path(r"C:\Users\33836\Documents\deepseek-harness\default-workspace\MatherCup\数据\A")
+A = pathlib.Path(os.environ.get("DESKTOP_ATTACH", "../题目/_extracted/A/附件"))
+B = pathlib.Path(os.environ.get("REPO_DATA", "数据/A"))
 
 for name in ["1.csv", "2.csv", "4.csv", "5.csv", "6.csv", "7.csv"]:
     a = pd.read_csv(A / name, encoding="utf-8-sig")

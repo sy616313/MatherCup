@@ -1,4 +1,4 @@
-﻿  1 Acetaldehyde
+  1 Acetaldehyde
   2 Carbon disulfide
   3 Diethyl sulfide
   4 Dimethyl sulfide
